@@ -1,0 +1,16 @@
+stages:
+    - lint
+    - test
+
+before_script:
+    - yarn
+
+lint:
+    stage: lint
+    script:
+        - yarn run lint
+
+test:
+    stage: test
+    script:
+        - yarn run test
