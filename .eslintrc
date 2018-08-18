@@ -1,0 +1,103 @@
+{
+  "extends": "airbnb-base",
+  "parser": "babel-eslint",
+  "plugins": [
+    "react",
+    "react-native"
+  ],
+  "env": {
+    "node": true,
+    "jest": true,
+    "es6": true,
+    "browser": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".android.js", ".ios.js"]
+      }
+    }
+  },
+  "rules": {
+      "indent": [1, 2, {
+        "ArrayExpression": "first",
+        "CallExpression": { "arguments": "first" },
+        "FunctionDeclaration": { "parameters": "first" },
+        "FunctionExpression": { "parameters": "first" },
+        "ImportDeclaration": "first",
+        "ObjectExpression": "first",
+        "SwitchCase": 1
+      }],
+      "no-console": [1, { "allow": ["warn", "disableYellowBox"] }],
+      "quote-props": ["error", "as-needed", { "numbers": true }],
+      "no-unused-vars": 1,
+      "no-underscore-dangle": 0,
+      "no-throw-literal": "error",
+      "brace-style": ["error", "1tbs", { "allowSingleLine": false }],
+      "curly": 2,
+      "max-len": ["error", 180, 2, {
+        "ignoreUrls": true,
+        "ignoreComments": false,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }],
+      "import/no-named-default": 0,
+      "class-methods-use-this": 0,
+      "arrow-parens": 0,
+      "eol-last": ["error", "always"],
+      "object-curly-newline": ["error", { "consistent": true }],
+      "linebreak-style": [0, "unix"],
+      "generator-star-spacing": 0,
+      "require-yield": 0,
+      "id-length": 0,
+      "object-shorthand": 0,
+      "no-plusplus": 0,
+      "padded-blocks": [2, { "classes": "always", "switches": "never", "blocks": "never" }],
+      "no-use-before-define": ["error", { "functions": false, "classes": false }],
+      "import/extensions": 2,
+      "import/prefer-default-export": 0,
+      "react/forbid-prop-types": 0,
+      "react/jsx-boolean-value": 1,
+      "react/jsx-closing-bracket-location": 1,
+      "react/jsx-tag-spacing": [1, {"beforeSelfClosing": "always", "closingSlash": "never", "afterOpening": "never"}],
+      "react/jsx-curly-spacing": 1,
+      "react/jsx-first-prop-new-line": 0,
+      "react/jsx-indent-props": [1, 2],
+      "react/jsx-indent": [1, 2],
+      "react/jsx-key": 1,
+      "react/jsx-max-props-per-line": 0,
+      "react/jsx-no-duplicate-props": 1,
+      "react/jsx-no-undef": 1,
+      "react/jsx-quotes": 0,
+      "jsx-quotes": [2, "prefer-double"],
+      "react/jsx-sort-props": 1,
+      "react/jsx-uses-react": 1,
+      "react/jsx-uses-vars": 1,
+      "react/no-danger": 1,
+      "react/no-did-mount-set-state": 1,
+      "react/no-did-update-set-state": 1,
+      "react/no-direct-mutation-state": 1,
+      "react/no-multi-comp": 0,
+      "react/no-set-state": 0,
+      "react/no-unknown-property": 1,
+      "react/prefer-stateless-function": 1,
+      "react/prefer-es6-class": 1,
+      "react/prop-types": 0,
+      "react/react-in-jsx-scope": 1,
+      "react/self-closing-comp": 1,
+      "react/sort-comp": 1,
+      "no-return-await": 0,
+      "vars-on-top": 0,
+      "func-names": 0,
+      "arrow-body-style": 0,
+      "prefer-template": 0,
+      "no-return-assign": 0,
+      "no-unused-expressions": 0,
+      "new-cap": 0,
+      "global-require": 0,
+      "no-multiple-empty-lines": ["error", { "max": 1, "maxBOF": 0 }],
+      "no-extra-parens": "error",
+      "react/require-default-props": 0,
+      "import/no-mutable-exports": 0 //# Waiting for a fix to eslint-plugin-import to enable this
+  }
+}
