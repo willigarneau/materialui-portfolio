@@ -1,11 +1,14 @@
 import React from 'react';
-import { BrowserRouter, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Welcome from '../../profile/containers/Welcome';
 
 export default function AppRouter() {
   return (
     <BrowserRouter>
       <div>
-        <Switch />
+        <Switch>
+          <Route component={() => <Welcome />} exact path="/" />
+        </Switch>
       </div>
     </BrowserRouter>
   );
