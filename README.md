@@ -1,4 +1,9 @@
-  <h1 style="font-size:400%" align="center">sexy-portfolio</h1>
+<p align="center">
+  <img width="150" src="./assets/images/sexy-portfolio-logo.png">
+  <br/>
+</p>
+  <h5 align="center">sexy-portfolio</h5> 
+  <h2 align="center">👨‍💻 Best web portfolio for developers 🍾</h2>
 
 <p align="center">
   <img src="https://travis-ci.com/Thyix/sexy-portfolio.svg?branch=master">
