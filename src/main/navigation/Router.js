@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Welcome from '../../profile/containers/Welcome';
+import Welcome from '../../profile/containers/Welcome.jsx';
 
 export default function AppRouter() {
   return (
