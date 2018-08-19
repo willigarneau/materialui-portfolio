@@ -19,7 +19,7 @@ import Parallax from '../../main/components/Parallax/Parallax.jsx';
 
 import profile from '../../assets/images/profilePicture.jpg';
 
-import profilePageStyle from '../components/style/welcomeStyle.jsx';
+import profilePageStyle from '../../assets/jss/material-kit-react/views/profilePage.jsx';
 
 type Props = {
   classes:any,

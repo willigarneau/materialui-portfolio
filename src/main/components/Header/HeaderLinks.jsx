@@ -30,17 +30,17 @@ function HeaderLinks({ ...props }) {
             className: classes.navLink,
             color: 'transparent',
           }}
-          buttonText="Components"
+          buttonText="Voir plus !"
           dropdownList={[
             <Link className={classes.dropdownLink} to="/">
-              All components
+              À Propos
             </Link>,
             <a
               className={classes.dropdownLink}
               href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
               target="_blank"
             >
-              Documentation
+              Contactez-moi :)
             </a>,
           ]}
           noLiPadding
@@ -50,10 +50,10 @@ function HeaderLinks({ ...props }) {
         <Button
           className={classes.navLink}
           color="transparent"
-          href="https://www.creative-tim.com/product/material-kit-react"
+          href="https://github.com/Thyix/sexy-portfolio"
           target="_blank"
         >
-          <CloudDownload className={classes.icons} /> Download
+          <CloudDownload className={classes.icons} /> Contribuer
         </Button>
       </ListItem>
       <ListItem className={classes.listItem}>

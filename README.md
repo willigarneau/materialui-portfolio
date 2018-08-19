@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="150" src="./assets/images/sexy-portfolio-logo.png">
+  <img width="150" src="./src/assets/images/sexy-portfolio-logo.png">
   <br/>
 </p>
   <h5 align="center">sexy-portfolio</h5> 
