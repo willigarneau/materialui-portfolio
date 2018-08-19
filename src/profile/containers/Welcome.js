@@ -2,17 +2,15 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+
 // @material-ui/core components
 import withStyles from "@material-ui/core/styles/withStyles";
 import Tooltip from "@material-ui/core/Tooltip";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Camera from "@material-ui/icons/Camera";
-import Palette from "@material-ui/icons/Palette";
-import People from "@material-ui/icons/People";
-import Add from "@material-ui/icons/Add";
-import Favorite from "@material-ui/icons/Favorite";
+
+import { translate } from 'react-i18next';
+
 // core components
 import Header from "components/Header/Header.jsx";
 import Footer from "components/Footer/Footer.jsx";
@@ -29,18 +27,6 @@ import Parallax from "components/Parallax/Parallax.jsx";
 import Clearfix from "components/Clearfix/Clearfix.jsx";
 import Button from "components/CustomButtons/Button.jsx";
 
-import christian from "assets/img/faces/christian.jpg";
-import oluEletu from "assets/img/examples/olu-eletu.jpg";
-import clemOnojeghuo from "assets/img/examples/clem-onojeghuo.jpg";
-import cynthiaDelRio from "assets/img/examples/cynthia-del-rio.jpg";
-import mariyaGeorgieva from "assets/img/examples/mariya-georgieva.jpg";
-import clemOnojegaw from "assets/img/examples/clem-onojegaw.jpg";
-import darrenColeshill from "assets/img/examples/darren-coleshill.jpg";
-import avatar from "assets/img/faces/avatar.jpg";
-import marc from "assets/img/faces/marc.jpg";
-import kendall from "assets/img/faces/kendall.jpg";
-import cardProfile2Square from "assets/img/faces/card-profile2-square.jpg";
-
 import profilePageStyle from "assets/jss/material-kit-pro-react/views/profilePageStyle.jsx";
 
 class ProfilePage extends React.Component {
@@ -49,6 +35,7 @@ class ProfilePage extends React.Component {
     document.body.scrollTop = 0;
   }
   render() {
+    const image = "../../../assets/images/sexy-portfolio-logo.png"
     const { classes, ...rest } = this.props;
     const imageClasses = classNames(
       classes.imgRaised,
@@ -70,7 +57,7 @@ class ProfilePage extends React.Component {
           {...rest}
         />
         <Parallax
-          image={require("assets/img/examples/city.jpg")}
+          image={require(image)}
           filter="dark"
           className={classes.parallax}
         />
@@ -84,7 +71,7 @@ class ProfilePage extends React.Component {
                   </div>
                   <div className={classes.name}>
                     <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h6></h6>
                     <Button
                       justIcon
                       simple
