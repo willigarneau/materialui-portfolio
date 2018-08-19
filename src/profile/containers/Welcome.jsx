@@ -21,8 +21,12 @@ import profile from '../../assets/images/profilePicture.jpg';
 
 import profilePageStyle from '../components/style/welcomeStyle.jsx';
 
-function Welcome() {
-  const { classes, ...rest } = this.props;
+type Props = {
+  classes:any,
+  rest:any,
+}
+
+function Welcome({ classes, rest }:Props) {
   const imageClasses = classNames(
     classes.imgRaised,
     classes.imgRoundedCircle,
@@ -32,7 +36,7 @@ function Welcome() {
   return (
     <div>
       <Header
-        brand="Material Kit React"
+        brand="WG"
         changeColorOnScroll={{
           height: 200,
           color: 'white',
@@ -53,8 +57,8 @@ function Welcome() {
                     <img alt="..." className={imageClasses} src={profile} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>William Garneau</h3>
+                    <h6>Développeur de logiciels</h6>
                     <Button className={classes.margin5} justIcon link>
                       <i className={'fab fa-twitter'} />
                     </Button>
@@ -70,10 +74,7 @@ function Welcome() {
             </GridContainer>
             <div className={classes.description}>
               <p>
-                  An artist of considerable range, Chet Faker — the name taken
-                  by Melbourne-raised, Brooklyn-based Nick Murphy — writes,
-                  performs and records all of his own music, giving it a warm,
-                  intimate feel with a solid groove structure.{' '}
+                  Développeur logiciel et étudiant au cégep lévis-lauzon
               </p>
             </div>
             <GridContainer justify="center">
