@@ -1,115 +1,121 @@
-/* eslint-disable */
-import React from "react";
+import React from 'react';
 // nodejs library that concatenates classes
-import classNames from "classnames";
+import classNames from 'classnames';
 
 // @material-ui/core components
-import withStyles from "@material-ui/core/styles/withStyles";
-import Tooltip from "@material-ui/core/Tooltip";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+import withStyles from '@material-ui/core/styles/withStyles';
+import Tooltip from '@material-ui/core/Tooltip';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
 
-import { translate } from 'react-i18next';
+// @material-ui/icons
+import Camera from '@material-ui/icons/Camera';
+import Palette from '@material-ui/icons/Palette';
+import People from '@material-ui/icons/People';
+import Add from '@material-ui/icons/Add';
+import Favorite from '@material-ui/icons/Favorite';
 
 // core components
-import Header from "components/Header/Header.jsx";
-import Footer from "components/Footer/Footer.jsx";
-import GridContainer from "components/Grid/GridContainer.jsx";
-import GridItem from "components/Grid/GridItem.jsx";
-import HeaderLinks from "components/Header/HeaderLinks.jsx";
-import NavPills from "components/NavPills/NavPills.jsx";
-import Card from "components/Card/Card.jsx";
-import CardBody from "components/Card/CardBody.jsx";
-import CardHeader from "components/Card/CardHeader.jsx";
-import Badge from "components/Badge/Badge.jsx";
-import Muted from "components/Typography/Muted.jsx";
-import Parallax from "components/Parallax/Parallax.jsx";
-import Clearfix from "components/Clearfix/Clearfix.jsx";
-import Button from "components/CustomButtons/Button.jsx";
+import Header from '../../main/components/Header/Header.jsx';
+import Footer from '../../main/components/Footer/Footer.jsx';
+import GridContainer from '../../main/components/Grid/GridContainer.jsx';
+import GridItem from '../../main/components/Grid/GridItem.jsx';
+import HeaderLinks from '../../main/components/Header/HeaderLinks.jsx';
+import NavPills from '../../main/components/NavPills/NavPills.jsx';
+import Card from '../../main/components/Card/Card.jsx';
+import CardBody from '../../main/components/Card/CardBody.jsx';
+import CardHeader from '../../main/components/Card/CardHeader.jsx';
+import Badge from '../../main/components/Badge/Badge.jsx';
+import Muted from '../../main/components/Typography/Muted.jsx';
+import Parallax from '../../main/components/Parallax/Parallax.jsx';
+import Clearfix from '../../main/components/Clearfix/Clearfix.jsx';
+import Button from '../../main/components/CustomButtons/Button.jsx';
 
-import profilePageStyle from "assets/jss/material-kit-pro-react/views/profilePageStyle.jsx";
+import profilePicture from '../../assets/images/profilePicture.jpg';
+
+import profilePageStyle from '../components/style/welcomeStyle.jsx';
 
 class ProfilePage extends React.Component {
+
   componentDidMount() {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   }
   render() {
-    const image = "../../../assets/images/sexy-portfolio-logo.png"
     const { classes, ...rest } = this.props;
     const imageClasses = classNames(
       classes.imgRaised,
       classes.imgRoundedCircle,
-      classes.imgFluid
+      classes.imgFluid,
     );
     const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
       <div>
         <Header
-          color="transparent"
           brand="Material Kit PRO React"
-          links={<HeaderLinks dropdownHoverColor="info" />}
-          fixed
           changeColorOnScroll={{
             height: 200,
-            color: "info"
+            color: 'info',
           }}
+          color="transparent"
+          fixed
+          links={<HeaderLinks dropdownHoverColor="info" />}
           {...rest}
         />
         <Parallax
-          image={require(image)}
-          filter="dark"
           className={classes.parallax}
+          filter="dark"
+          image={require('../../assets/images/sexy-portfolio-logo.png')}
         />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
             <GridContainer justify="center">
-              <GridItem xs={12} sm={12} md={6}>
+              <GridItem md={6} sm={12} xs={12}>
                 <div className={classes.profile}>
                   <div>
-                    <img src={christian} alt="..." className={imageClasses} />
+                    <img alt="..." className={imageClasses} src={profilePicture} style={{ borderRadius: '40', height: '30', width: '30' }} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6></h6>
+                    <h3 className={classes.title}>William Garneau</h3>
+                    <h6 />
                     <Button
-                      justIcon
-                      simple
+                      className={classes.margin5}
                       color="dribbble"
-                      className={classes.margin5}
-                    >
-                      <i className={classes.socials + " fab fa-dribbble"} />
-                    </Button>
-                    <Button
                       justIcon
                       simple
+                    >
+                      <i className={classes.socials + ' fab fa-dribbble'} />
+                    </Button>
+                    <Button
+                      className={classes.margin5}
                       color="twitter"
-                      className={classes.margin5}
-                    >
-                      <i className={classes.socials + " fab fa-twitter"} />
-                    </Button>
-                    <Button
                       justIcon
                       simple
-                      color="pinterest"
-                      className={classes.margin5}
                     >
-                      <i className={classes.socials + " fab fa-pinterest"} />
+                      <i className={classes.socials + ' fab fa-twitter'} />
+                    </Button>
+                    <Button
+                      className={classes.margin5}
+                      color="pinterest"
+                      justIcon
+                      simple
+                    >
+                      <i className={classes.socials + ' fab fa-pinterest'} />
                     </Button>
                   </div>
                 </div>
                 <div className={classes.follow}>
                   <Tooltip
-                    id="tooltip-top"
-                    title="Follow this user"
-                    placement="top"
                     classes={{ tooltip: classes.tooltip }}
+                    id="tooltip-top"
+                    placement="top"
+                    title="Follow this user"
                   >
                     <Button
+                      className={classes.followButton}
+                      color="primary"
                       justIcon
                       round
-                      color="primary"
-                      className={classes.followButton}
                     >
                       <Add className={classes.followIcon} />
                     </Button>
@@ -124,7 +130,7 @@ class ProfilePage extends React.Component {
                 An artist of considerable range, Chet Faker — the name taken by
                 Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
                 and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{" "}
+                feel with a solid groove structure.{' '}
               </p>
             </div>
             <div className={classes.profileTabs}>
@@ -133,24 +139,24 @@ class ProfilePage extends React.Component {
                 color="primary"
                 tabs={[
                   {
-                    tabButton: "Work",
+                    tabButton: 'Work',
                     tabIcon: Palette,
                     tabContent: (
                       <GridContainer>
                         <GridItem
-                          xs={12}
-                          sm={12}
-                          md={7}
                           className={classes.gridItem}
+                          md={7}
+                          sm={12}
+                          xs={12}
                         >
                           <h4 className={classes.title}>Latest Collections</h4>
                           <GridContainer className={classes.collections}>
-                            <GridItem xs={12} sm={12} md={6}>
+                            <GridItem md={6} sm={12} xs={12}>
                               <Card
                                 background
                                 style={{
-                                  backgroundImage:
-                                    "url(" + mariyaGeorgieva + ")"
+                                  // backgroundImage:
+                                  // 'url(' + mariyaGeorgieva + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -159,8 +165,8 @@ class ProfilePage extends React.Component {
                                   className={classes.cardBody}
                                 >
                                   <Badge
-                                    color="warning"
                                     className={classes.badge}
+                                    color="warning"
                                   >
                                     Spring 2016
                                   </Badge>
@@ -172,11 +178,11 @@ class ProfilePage extends React.Component {
                                 </CardBody>
                               </Card>
                             </GridItem>
-                            <GridItem xs={12} sm={12} md={6}>
+                            <GridItem md={6} sm={12} xs={12}>
                               <Card
                                 background
                                 style={{
-                                  backgroundImage: "url(" + clemOnojeghuo + ")"
+                                  // backgroundImage: 'url(' + clemOnojeghuo + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -184,7 +190,7 @@ class ProfilePage extends React.Component {
                                   background
                                   className={classes.cardBody}
                                 >
-                                  <Badge color="info" className={classes.badge}>
+                                  <Badge className={classes.badge} color="info">
                                     Spring 2016
                                   </Badge>
                                   <a href="#pablo">
@@ -195,11 +201,11 @@ class ProfilePage extends React.Component {
                                 </CardBody>
                               </Card>
                             </GridItem>
-                            <GridItem xs={12} sm={12} md={6}>
+                            <GridItem md={6} sm={12} xs={12}>
                               <Card
                                 background
                                 style={{
-                                  backgroundImage: "url(" + oluEletu + ")"
+                                  // backgroundImage: 'url(' + oluEletu + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -208,8 +214,8 @@ class ProfilePage extends React.Component {
                                   className={classes.cardBody}
                                 >
                                   <Badge
-                                    color="danger"
                                     className={classes.badge}
+                                    color="danger"
                                   >
                                     Summer 2016
                                   </Badge>
@@ -221,12 +227,12 @@ class ProfilePage extends React.Component {
                                 </CardBody>
                               </Card>
                             </GridItem>
-                            <GridItem xs={12} sm={12} md={6}>
+                            <GridItem md={6} sm={12} xs={12}>
                               <Card
                                 background
                                 style={{
-                                  backgroundImage:
-                                    "url(" + darrenColeshill + ")"
+                                  // backgroundImage:
+                                  // 'url(' + darrenColeshill + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -235,8 +241,8 @@ class ProfilePage extends React.Component {
                                   className={classes.cardBody}
                                 >
                                   <Badge
-                                    color="success"
                                     className={classes.badge}
+                                    color="success"
                                   >
                                     Winter 2016
                                   </Badge>
@@ -251,10 +257,10 @@ class ProfilePage extends React.Component {
                           </GridContainer>
                         </GridItem>
                         <GridItem
-                          xs={12}
-                          sm={12}
-                          md={2}
                           className={classes.gridItem}
+                          md={2}
+                          sm={12}
+                          xs={12}
                         >
                           <h4 className={classes.title}>Stats</h4>
                           <ul className={classes.listUnstyled}>
@@ -284,37 +290,37 @@ class ProfilePage extends React.Component {
                           <Badge color="rose">Luxury</Badge>
                         </GridItem>
                       </GridContainer>
-                    )
+                    ),
                   },
                   {
-                    tabButton: "Connections",
+                    tabButton: 'Connections',
                     tabIcon: People,
                     tabContent: (
                       <div>
                         <GridContainer justify="center">
                           <GridItem
-                            xs={12}
-                            sm={12}
-                            md={5}
                             className={classes.gridItem}
+                            md={5}
+                            sm={12}
+                            xs={12}
                           >
-                            <Card profile plain className={classes.card}>
+                            <Card className={classes.card} plain profile>
                               <GridContainer>
-                                <GridItem xs={12} sm={12} md={5}>
+                                <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img src={avatar} alt="..." />
+                                      <img alt="..." src={profilePicture} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: "url(" + avatar + ")",
-                                        opacity: "1"
+                                        backgroundImage: 'url(' + profilePicture + ')',
+                                        opacity: '1',
                                       }}
                                     />
                                   </CardHeader>
                                 </GridItem>
-                                <GridItem xs={12} sm={12} md={7}>
+                                <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
                                       Gigi Hadid
@@ -333,28 +339,28 @@ class ProfilePage extends React.Component {
                             </Card>
                           </GridItem>
                           <GridItem
-                            xs={12}
-                            sm={12}
-                            md={5}
                             className={classes.gridItem}
+                            md={5}
+                            sm={12}
+                            xs={12}
                           >
-                            <Card profile plain className={classes.card}>
+                            <Card className={classes.card} plain profile>
                               <GridContainer>
-                                <GridItem xs={12} sm={12} md={5}>
+                                <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img src={marc} alt="..." />
+                                      <img alt="..." src={profilePicture} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: "url(" + marc + ")",
-                                        opacity: "1"
+                                        backgroundImage: 'url(' + profilePicture + ')',
+                                        opacity: '1',
                                       }}
                                     />
                                   </CardHeader>
                                 </GridItem>
-                                <GridItem xs={12} sm={12} md={7}>
+                                <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
                                       Marc Jacobs
@@ -375,28 +381,28 @@ class ProfilePage extends React.Component {
                         </GridContainer>
                         <GridContainer justify="center">
                           <GridItem
-                            xs={12}
-                            sm={12}
-                            md={5}
                             className={classes.gridItem}
+                            md={5}
+                            sm={12}
+                            xs={12}
                           >
-                            <Card profile plain className={classes.card}>
+                            <Card className={classes.card} plain profile>
                               <GridContainer>
-                                <GridItem xs={12} sm={12} md={5}>
+                                <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img src={kendall} alt="..." />
+                                      <img alt="..." src={profilePicture} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: "url(" + kendall + ")",
-                                        opacity: "1"
+                                        backgroundImage: 'url(' + profilePicture + ')',
+                                        opacity: '1',
                                       }}
                                     />
                                   </CardHeader>
                                 </GridItem>
-                                <GridItem xs={12} sm={12} md={7}>
+                                <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
                                       Kendall Jenner
@@ -414,29 +420,29 @@ class ProfilePage extends React.Component {
                             </Card>
                           </GridItem>
                           <GridItem
-                            xs={12}
-                            sm={12}
-                            md={5}
                             className={classes.gridItem}
+                            md={5}
+                            sm={12}
+                            xs={12}
                           >
-                            <Card profile plain className={classes.card}>
+                            <Card className={classes.card} plain profile>
                               <GridContainer>
-                                <GridItem xs={12} sm={12} md={5}>
+                                <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img src={cardProfile2Square} alt="..." />
+                                      <img alt="..." src={profilePicture} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
                                         backgroundImage:
-                                          "url(" + cardProfile2Square + ")",
-                                        opacity: "1"
+                                          'url(' + profilePicture + ')',
+                                        opacity: '1',
                                       }}
                                     />
                                   </CardHeader>
                                 </GridItem>
-                                <GridItem xs={12} sm={12} md={7}>
+                                <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
                                       George West
@@ -454,45 +460,45 @@ class ProfilePage extends React.Component {
                           </GridItem>
                         </GridContainer>
                       </div>
-                    )
+                    ),
                   },
                   {
-                    tabButton: "Media",
+                    tabButton: 'Media',
                     tabIcon: Camera,
                     tabContent: (
                       <GridContainer justify="center">
-                        <GridItem xs={12} sm={12} md={3}>
+                        <GridItem md={3} sm={12} xs={12}>
                           <img
                             alt="..."
-                            src={mariyaGeorgieva}
                             className={navImageClasses}
+                            src={profilePicture}
                           />
                           <img
                             alt="..."
-                            src={clemOnojegaw}
                             className={navImageClasses}
+                            src={profilePicture}
                           />
                         </GridItem>
-                        <GridItem xs={12} sm={12} md={3}>
+                        <GridItem md={3} sm={12} xs={12}>
                           <img
                             alt="..."
-                            src={clemOnojeghuo}
                             className={navImageClasses}
+                            src={profilePicture}
                           />
                           <img
                             alt="..."
-                            src={oluEletu}
                             className={navImageClasses}
+                            src={profilePicture}
                           />
                           <img
                             alt="..."
-                            src={cynthiaDelRio}
                             className={navImageClasses}
+                            src={profilePageStyle}
                           />
                         </GridItem>
                       </GridContainer>
-                    )
-                  }
+                    ),
+                  },
                 ]}
               />
             </div>
@@ -506,32 +512,32 @@ class ProfilePage extends React.Component {
                 <List className={classes.list}>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/"
                       className={classes.block}
+                      href="https://www.creative-tim.com/"
                     >
                       Creative Tim
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/presentation"
                       className={classes.block}
+                      href="https://www.creative-tim.com/presentation"
                     >
                       About us
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="//blog.creative-tim.com/"
                       className={classes.block}
+                      href="//blog.creative-tim.com/"
                     >
                       Blog
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
-                      href="https://www.creative-tim.com/license"
                       className={classes.block}
+                      href="https://www.creative-tim.com/license"
                     >
                       Licenses
                     </a>
@@ -539,8 +545,8 @@ class ProfilePage extends React.Component {
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{" "}
-                <Favorite className={classes.icon} /> by{" "}
+                &copy; {1900 + new Date().getYear()} , made with{' '}
+                <Favorite className={classes.icon} /> by{' '}
                 <a href="https://www.creative-tim.com">Creative Tim</a> for a
                 better web.
               </div>
@@ -550,11 +556,10 @@ class ProfilePage extends React.Component {
       </div>
     );
   }
+
 }
 
 export default withStyles(profilePageStyle)(ProfilePage);
-
-
 
 // WEBPACK FOOTER //
 // ./src/views/ProfilePage/ProfilePage.jsx
