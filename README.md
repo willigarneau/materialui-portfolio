@@ -6,4 +6,4 @@
   <p align="center">
   <img src="https://travis-ci.com/Thyix/sexy-portfolio.svg?branch=master">
   </p>
-  <h2 align="center">👨‍💻 Best web portfolio for developers 🍾</h2>
+  <h1 align="center">👨‍💻 Best web portfolio for developers 🍾</h1>
