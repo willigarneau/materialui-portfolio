@@ -3,8 +3,7 @@
   <br/>
 </p>
   <h5 align="center">sexy-portfolio</h5> 
-  <h2 align="center">👨‍💻 Best web portfolio for developers 🍾</h2>
-
-<p align="center">
+  <p align="center">
   <img src="https://travis-ci.com/Thyix/sexy-portfolio.svg?branch=master">
-</p>
+  </p>
+  <h2 align="center">👨‍💻 Best web portfolio for developers 🍾</h2>
