@@ -84,7 +84,7 @@ function Welcome({ classes, rest }:Props) {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: 'Studio',
+                      tabButton: 'Projets',
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
@@ -116,7 +116,7 @@ function Welcome({ classes, rest }:Props) {
                       ),
                     },
                     {
-                      tabButton: 'Work',
+                      tabButton: 'Expérience',
                       tabIcon: Palette,
                       tabContent: (
                         <GridContainer justify="center">
@@ -153,7 +153,7 @@ function Welcome({ classes, rest }:Props) {
                       ),
                     },
                     {
-                      tabButton: 'Favorite',
+                      tabButton: 'Passions',
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">
