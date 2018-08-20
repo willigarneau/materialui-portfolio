@@ -57,8 +57,8 @@ function Welcome({ classes, rest }:Props) {
                     <img alt="..." className={imageClasses} src={profile} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>William Garneau</h3>
-                    <h6>Développeur de logiciels</h6>
+                    <h3 className={classes.title} style={{ marginBottom: -70 }}>WILLIAM GARNEAU</h3>
+                    <h5>Développeur de logiciels</h5>
                     <Button className={classes.margin5} justIcon link>
                       <i className={'fab fa-twitter'} />
                     </Button>
@@ -72,9 +72,11 @@ function Welcome({ classes, rest }:Props) {
                 </div>
               </GridItem>
             </GridContainer>
-            <div className={classes.description}>
+            <div className={classes.description} style={{ marginTop: -50 }}>
               <p>
-                  Développeur logiciel et étudiant au cégep lévis-lauzon
+              J'ai 19 ans, je suis passionné par la programmation, l'intelligence artificielle,
+              la musique et le sport. J'étudie actuellement au Cégep Lévis-Lauzon en informatique
+              industrielle.
               </p>
             </div>
             <GridContainer justify="center">
