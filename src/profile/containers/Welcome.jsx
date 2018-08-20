@@ -75,7 +75,7 @@ function Welcome({ classes, rest }:Props) {
                       justIcon
                       link
                     >
-                      <img src={github} style={{ marginTop: 10 }} />
+                      <img alt="githubLogo" src={github} style={{ marginTop: 15 }} />
                     </Button>
                     <Button
                       className={classes.margin5}
