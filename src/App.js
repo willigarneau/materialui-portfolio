@@ -1,9 +1,7 @@
 import React from 'react';
 import { I18nextProvider } from 'react-i18next';
-import i18n from '../main/i18n';
-import AppRouter from '../main/navigation/Router';
-
-import './App.css';
+import i18n from './main/i18n';
+import AppRouter from './main/navigation/Router';
 
 function App() {
   return (

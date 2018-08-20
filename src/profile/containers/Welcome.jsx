@@ -36,7 +36,7 @@ function Welcome({ classes, rest }:Props) {
   return (
     <div>
       <Header
-        brand="WG"
+        brand="William Garneau"
         changeColorOnScroll={{
           height: 200,
           color: 'white',
@@ -46,7 +46,7 @@ function Welcome({ classes, rest }:Props) {
         rightLinks={<HeaderLinks />}
         {...rest}
       />
-      <Parallax filter image={require('../../assets/images/sexy-portfolio-logo.png')} small />
+      <Parallax filter image={require('../../assets/images/pofile-background.jpg')} medium />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
