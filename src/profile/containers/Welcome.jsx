@@ -14,6 +14,8 @@ import HeaderLinks from '../../main/components/Header/HeaderLinks.jsx';
 import NavPills from '../../main/components/NavPills/NavPills.jsx';
 import Parallax from '../../main/components/Parallax/Parallax.jsx';
 
+import AccomplishmentCard from '../components/Accomplishment.jsx';
+
 import github from '../../assets/images/icons/github-brands.svg';
 import linkedin from '../../assets/images/icons/linkedin-brands.svg';
 import instagram from '../../assets/images/icons/instagram-brands.svg';
@@ -34,7 +36,6 @@ function Welcome({ classes, rest }:Props) {
     classes.imgFluid,
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
-  console.log(classes);
   return (
     <div>
       <Header
@@ -108,15 +109,9 @@ function Welcome({ classes, rest }:Props) {
                       tabContent: (
                         <GridContainer justify="center">
                           <GridItem md={4} sm={12} xs={12}>
-                            <img
-                              alt="..."
+                            <AccomplishmentCard
                               className={navImageClasses}
-                              src={profile}
-                            />
-                            <img
-                              alt="..."
-                              className={navImageClasses}
-                              src={profile}
+                              title={'3d'}
                             />
                           </GridItem>
                           <GridItem md={4} sm={12} xs={12}>
