@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { List, ListItem, withStyles } from "@material-ui/core";
 
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-
 import footerStyle from "../../../assets/jss/material-kit-react/components/footerStyle.jsx";
 
 function Footer({ ...props }) {
@@ -47,10 +44,9 @@ function Footer({ ...props }) {
           </List>
         </div>
         <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()} , fait avec{" "}
-          <Favorite className={classes.icon} /> par{" "}
+          &copy; {1900 + new Date().getYear()}, fait par {' '}
           <a
-            href="https://www.creative-tim.com"
+            href="https://www.linkedin.com/in/william-garneau-904707148/"
             className={aClasses}
             target="_blank"
           >

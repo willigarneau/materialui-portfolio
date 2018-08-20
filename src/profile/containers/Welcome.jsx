@@ -36,7 +36,7 @@ function Welcome({ classes, rest }:Props) {
   return (
     <div>
       <Header
-        brand="WG"
+        brand="William Garneau"
         changeColorOnScroll={{
           height: 200,
           color: 'white',
@@ -46,7 +46,7 @@ function Welcome({ classes, rest }:Props) {
         rightLinks={<HeaderLinks />}
         {...rest}
       />
-      <Parallax filter image={require('../../assets/images/sexy-portfolio-logo.png')} small />
+      <Parallax filter image={require('../../assets/images/pofile-background.jpg')} medium />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
@@ -84,7 +84,7 @@ function Welcome({ classes, rest }:Props) {
                   color="primary"
                   tabs={[
                     {
-                      tabButton: 'Studio',
+                      tabButton: 'Projets',
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
@@ -116,7 +116,7 @@ function Welcome({ classes, rest }:Props) {
                       ),
                     },
                     {
-                      tabButton: 'Work',
+                      tabButton: 'Expérience',
                       tabIcon: Palette,
                       tabContent: (
                         <GridContainer justify="center">
@@ -153,7 +153,7 @@ function Welcome({ classes, rest }:Props) {
                       ),
                     },
                     {
-                      tabButton: 'Favorite',
+                      tabButton: 'Passions',
                       tabIcon: Favorite,
                       tabContent: (
                         <GridContainer justify="center">

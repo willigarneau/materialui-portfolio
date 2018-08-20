@@ -11,7 +11,7 @@ import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
 
 // @material-ui/icons
-import { Menu, CloudDownload } from '@material-ui/icons';
+import { AlternateEmail, CloudDownload, Person } from '@material-ui/icons';
 
 // core components
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx';
@@ -21,91 +21,56 @@ import headerLinksStyle from '../../../assets/jss/material-kit-react/components/
 
 function HeaderLinks({ ...props }) {
   const { classes } = props;
+  console.log(classes);
   return (
     <List className={classes.list}>
       <ListItem className={classes.listItem}>
-        <CustomDropdown
-          buttonIcon={Menu}
-          buttonProps={{
-            className: classes.navLink,
-            color: 'transparent',
-          }}
-          buttonText="Voir plus !"
-          dropdownList={[
-            <Link className={classes.dropdownLink} to="/">
-              À Propos
-            </Link>,
-            <a
-              className={classes.dropdownLink}
-              href="https://creativetimofficial.github.io/material-kit-react/#/documentation"
+        <Tooltip
+            classes={{ tooltip: classes.tooltip }}
+            placement={window.innerWidth > 959 ? 'bottom' : 'left'}
+            title="Qui suis-je?"
+          >
+            <Button
+              className={classes.navLink}
+              color="transparent"
+              href="https://github.com/Thyix/sexy-portfolio"
               target="_blank"
             >
-              Contactez-moi :)
-            </a>,
-          ]}
-          noLiPadding
-        />
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Button
-          className={classes.navLink}
-          color="transparent"
-          href="https://github.com/Thyix/sexy-portfolio"
-          target="_blank"
-        >
-          <CloudDownload className={classes.icons} /> Contribuer
-        </Button>
+              <Person className={classes.icons} /> À propos
+            </Button>
+          </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          classes={{ tooltip: classes.tooltip }}
-          id="instagram-twitter"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          title="Follow us on twitter"
-        >
-          <Button
-            className={classes.navLink}
-            color="transparent"
-            href="https://twitter.com/CreativeTim"
-            target="_blank"
-          >
-            <i className={classes.socialIcons + ' fab fa-twitter'} />
-          </Button>
-        </Tooltip>
+              classes={{ tooltip: classes.tooltip }}
+              placement={window.innerWidth > 959 ? 'bottom' : 'left'}
+              title="Informations de contact"
+            >
+            <Button
+              className={classes.navLink}
+              color="transparent"
+              href="https://github.com/Thyix/sexy-portfolio"
+              target="_blank"
+            >
+              <AlternateEmail className={classes.icons} /> Contactez-moi
+            </Button>
+          </Tooltip>
       </ListItem>
       <ListItem className={classes.listItem}>
         <Tooltip
-          classes={{ tooltip: classes.tooltip }}
-          id="instagram-facebook"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          title="Follow us on facebook"
-        >
-          <Button
-            className={classes.navLink}
-            color="transparent"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
+            classes={{ tooltip: classes.tooltip }}
+            placement={window.innerWidth > 959 ? 'bottom' : 'left'}
+            title="Contribuez sur Github"
           >
-            <i className={classes.socialIcons + ' fab fa-facebook'} />
-          </Button>
-        </Tooltip>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Tooltip
-          classes={{ tooltip: classes.tooltip }}
-          id="instagram-tooltip"
-          placement={window.innerWidth > 959 ? 'top' : 'left'}
-          title="Follow us on instagram"
-        >
-          <Button
-            className={classes.navLink}
-            color="transparent"
-            href="https://www.instagram.com/CreativeTimOfficial"
-            target="_blank"
-          >
-            <i className={classes.socialIcons + ' fab fa-instagram'} />
-          </Button>
-        </Tooltip>
+            <Button
+              className={classes.navLink}
+              color="transparent"
+              href="https://github.com/Thyix/sexy-portfolio"
+              target="_blank"
+            >
+              <CloudDownload className={classes.icons} /> Contribuer
+            </Button>
+          </Tooltip>
       </ListItem>
     </List>
   );
