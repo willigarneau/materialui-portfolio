@@ -6,7 +6,7 @@ import withStyles from '@material-ui/core/styles/withStyles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import Tooltip from '@material-ui/core/Tooltip';
-import { AlternateEmail, CloudDownload, Person } from '@material-ui/icons';
+import { AlternateEmail, Code, Person } from '@material-ui/icons';
 import CustomDropdown from '../CustomDropdown/CustomDropdown.jsx';
 import Button from '../CustomButtons/Button.jsx';
 
@@ -61,7 +61,7 @@ function HeaderLinks({ ...props }) {
               href="https://github.com/Thyix/sexy-portfolio"
               target="_blank"
             >
-              <CloudDownload className={classes.icons} /> Contribuer
+              <Code className={classes.icons} /> Contribuer
             </Button>
           </Tooltip>
       </ListItem>
