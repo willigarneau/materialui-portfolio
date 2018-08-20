@@ -34,6 +34,7 @@ function Welcome({ classes, rest }:Props) {
     classes.imgFluid,
   );
   const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
+  console.log(classes);
   return (
     <div>
       <Header
@@ -61,15 +62,15 @@ function Welcome({ classes, rest }:Props) {
                     <h3 className={classes.title}>WILLIAM GARNEAU</h3>
                     <h5 style={{ marginTop: -20 }}>Développeur de logiciels</h5>
                     <Button
-                      className={classes.margin5}
+                      className={classes.imgRoundedCircle}
                       href="https://www.linkedin.com/in/william-garneau-904707148/"
                       justIcon
                       link
                     >
-                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 15 }} />
+                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 17 }} />
                     </Button>
                     <Button
-                      className={classes.margin5}
+                      className={classes.imgRoundedCircle}
                       href="https://github.com/Thyix/sexy-portfolio"
                       justIcon
                       link
@@ -77,12 +78,12 @@ function Welcome({ classes, rest }:Props) {
                       <img alt="githubLogo" src={github} style={{ marginTop: 15 }} />
                     </Button>
                     <Button
-                      className={classes.margin5}
+                      className={classes.imgRoundedCircle}
                       href="https://www.instagram.com/william_garneau/"
                       justIcon
                       link
                     >
-                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 15 }} />
+                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 17 }} />
                     </Button>
                   </div>
                 </div>
