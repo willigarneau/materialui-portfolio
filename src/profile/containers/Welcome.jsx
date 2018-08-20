@@ -17,6 +17,8 @@ import HeaderLinks from '../../main/components/Header/HeaderLinks.jsx';
 import NavPills from '../../main/components/NavPills/NavPills.jsx';
 import Parallax from '../../main/components/Parallax/Parallax.jsx';
 
+import github from '../../assets/images/icons/github-brands.svg';
+
 import profile from '../../assets/images/profilePicture.jpg';
 
 import profilePageStyle from '../../assets/jss/material-kit-react/views/profilePage.jsx';
@@ -46,7 +48,7 @@ function Welcome({ classes, rest }:Props) {
         rightLinks={<HeaderLinks />}
         {...rest}
       />
-      <Parallax big big filter image={require('../../assets/images/minimalist-portfolio.gif')} medium />
+      <Parallax big filter image={require('../../assets/images/minimalist-portfolio.gif')} medium />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
@@ -57,22 +59,37 @@ function Welcome({ classes, rest }:Props) {
                     <img alt="..." className={imageClasses} src={profile} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title} style={{ marginBottom: -70 }}>WILLIAM GARNEAU</h3>
+                    <h3 className={classes.title} style={{ marginBottom: -100 }}>WILLIAM GARNEAU</h3>
                     <h5>Développeur de logiciels</h5>
-                    <Button className={classes.margin5} justIcon link>
+                    <Button
+                      className={classes.margin5}
+                      href="https://github.com/Thyix/sexy-portfolio"
+                      justIcon
+                      link
+                    >
                       <i className={'fab fa-twitter'} />
                     </Button>
-                    <Button className={classes.margin5} justIcon link>
-                      <i className={'fab fa-instagram'} />
+                    <Button
+                      className={classes.margin5}
+                      href="https://github.com/Thyix/sexy-portfolio"
+                      justIcon
+                      link
+                    >
+                      <img src={github} style={{ marginTop: 10 }} />
                     </Button>
-                    <Button className={classes.margin5} justIcon link>
+                    <Button
+                      className={classes.margin5}
+                      href="https://github.com/Thyix/sexy-portfolio"
+                      justIcon
+                      link
+                    >
                       <i className={'fab fa-facebook'} />
                     </Button>
                   </div>
                 </div>
               </GridItem>
             </GridContainer>
-            <div className={classes.description} style={{ marginTop: -50 }}>
+            <div className={classes.description}>
               <p>
               J'ai 19 ans, je suis passionné par la programmation, l'intelligence artificielle,
               la musique et le sport. J'étudie actuellement au Cégep Lévis-Lauzon en informatique
