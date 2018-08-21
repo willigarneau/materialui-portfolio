@@ -1,13 +1,10 @@
 import React from 'react';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
-// @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-// @material-ui/icons
 import Camera from '@material-ui/icons/Camera';
 import Palette from '@material-ui/icons/Palette';
 import Favorite from '@material-ui/icons/Favorite';
-// core components
 import Header from '../../main/components/Header/Header.jsx';
 import Footer from '../../main/components/Footer/Footer.jsx';
 import Button from '../../main/components/CustomButtons/Button.jsx';
@@ -17,7 +14,11 @@ import HeaderLinks from '../../main/components/Header/HeaderLinks.jsx';
 import NavPills from '../../main/components/NavPills/NavPills.jsx';
 import Parallax from '../../main/components/Parallax/Parallax.jsx';
 
+import AccomplishmentCard from '../components/AccomplishmentCard.jsx';
+
 import github from '../../assets/images/icons/github-brands.svg';
+import linkedin from '../../assets/images/icons/linkedin-brands.svg';
+import instagram from '../../assets/images/icons/instagram-brands.svg';
 
 import profile from '../../assets/images/profilePicture.jpg';
 
@@ -59,18 +60,18 @@ function Welcome({ classes, rest }:Props) {
                     <img alt="..." className={imageClasses} src={profile} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title} style={{ marginBottom: -100 }}>WILLIAM GARNEAU</h3>
-                    <h5>Développeur de logiciels</h5>
+                    <h3 className={classes.title}>WILLIAM GARNEAU</h3>
+                    <h5 style={{ marginTop: -20 }}>Développeur de logiciels</h5>
                     <Button
-                      className={classes.margin5}
-                      href="https://github.com/Thyix/sexy-portfolio"
+                      className={classes.imgRoundedCircle}
+                      href="https://www.linkedin.com/in/william-garneau-904707148/"
                       justIcon
                       link
                     >
-                      <i className={'fab fa-twitter'} />
+                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 17 }} />
                     </Button>
                     <Button
-                      className={classes.margin5}
+                      className={classes.imgRoundedCircle}
                       href="https://github.com/Thyix/sexy-portfolio"
                       justIcon
                       link
@@ -78,12 +79,12 @@ function Welcome({ classes, rest }:Props) {
                       <img alt="githubLogo" src={github} style={{ marginTop: 15 }} />
                     </Button>
                     <Button
-                      className={classes.margin5}
-                      href="https://github.com/Thyix/sexy-portfolio"
+                      className={classes.imgRoundedCircle}
+                      href="https://www.instagram.com/william_garneau/"
                       justIcon
                       link
                     >
-                      <i className={'fab fa-facebook'} />
+                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 17 }} />
                     </Button>
                   </div>
                 </div>
@@ -107,19 +108,16 @@ function Welcome({ classes, rest }:Props) {
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem md={4} sm={12} xs={12}>
-                            <img
-                              alt="..."
+                          <GridItem md={6} sm={12} xs={12}>
+                            <AccomplishmentCard
                               className={navImageClasses}
-                              src={profile}
-                            />
-                            <img
-                              alt="..."
-                              className={navImageClasses}
-                              src={profile}
+                              description={'🕺 Top down 3D fighting game based on the naruto anime. Created with Unity 3D and Photon Cloud Engine. 🎮'}
+                              headLine={'3D Naruto Project'}
+                              img={'narutoProject'}
+                              link={'https://github.com/Thyix/naruto-project'}
                             />
                           </GridItem>
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={6} sm={12} xs={12}>
                             <img
                               alt="..."
                               className={navImageClasses}
@@ -139,7 +137,7 @@ function Welcome({ classes, rest }:Props) {
                       tabIcon: Palette,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={6} sm={12} xs={12}>
                             <img
                               alt="..."
                               className={navImageClasses}
