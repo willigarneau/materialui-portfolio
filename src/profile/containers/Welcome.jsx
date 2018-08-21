@@ -14,7 +14,7 @@ import HeaderLinks from '../../main/components/Header/HeaderLinks.jsx';
 import NavPills from '../../main/components/NavPills/NavPills.jsx';
 import Parallax from '../../main/components/Parallax/Parallax.jsx';
 
-import AccomplishmentCard from '../components/Accomplishment.jsx';
+import AccomplishmentCard from '../components/AccomplishmentCard.jsx';
 
 import github from '../../assets/images/icons/github-brands.svg';
 import linkedin from '../../assets/images/icons/linkedin-brands.svg';
@@ -108,13 +108,16 @@ function Welcome({ classes, rest }:Props) {
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={6} sm={12} xs={12}>
                             <AccomplishmentCard
                               className={navImageClasses}
-                              title={'3d'}
+                              description={'🕺 Top down 3D fighting game based on the naruto anime. Created with Unity 3D and Photon Cloud Engine. 🎮'}
+                              headLine={'3D Naruto Project'}
+                              img={'narutoProject'}
+                              link={'https://github.com/Thyix/naruto-project'}
                             />
                           </GridItem>
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={6} sm={12} xs={12}>
                             <img
                               alt="..."
                               className={navImageClasses}
@@ -134,7 +137,7 @@ function Welcome({ classes, rest }:Props) {
                       tabIcon: Palette,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={6} sm={12} xs={12}>
                             <img
                               alt="..."
                               className={navImageClasses}
