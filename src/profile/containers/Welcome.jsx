@@ -72,7 +72,7 @@ function Welcome({ classes, rest }:Props) {
                     </Button>
                     <Button
                       className={classes.imgRoundedCircle}
-                      href="https://github.com/Thyix/sexy-portfolio"
+                      href="https://github.com/Thyix"
                       justIcon
                       link
                     >
