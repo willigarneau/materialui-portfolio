@@ -32,7 +32,7 @@ const imgAssociation = [
   ['narutoProject', narutoProject],
 ];
 
-function AccomplishmentCard({ classes, img, imgDescription, headLine, description, link }:Props) {
+function ProjectCard({ classes, img, imgDescription, headLine, description, link }:Props) {
   return (
     <Card className={classes.card}>
       <CardMedia
@@ -63,4 +63,4 @@ function AccomplishmentCard({ classes, img, imgDescription, headLine, descriptio
   );
 }
 
-export default withStyles(styles)(AccomplishmentCard);
+export default withStyles(styles)(ProjectCard);
