@@ -5,6 +5,7 @@
   <h5 align="center">sexy-portfolio</h5> 
   <p align="center">
   <img src="https://travis-ci.com/Thyix/sexy-portfolio.svg?branch=master">
+  # This project is still in development. If you wish to contribute to it, fork it and make up a pull request :)
   </p>
   <h1 align="center">👨‍💻 Best web portfolio for developers 🍾</h1>
 
