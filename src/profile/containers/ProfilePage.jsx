@@ -8,7 +8,7 @@ import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 // @material-ui/icons
 import Camera from '@material-ui/icons/Camera';
-import Palette from '@material-ui/icons/Palette';
+import Palette from '@material-ui/icons/Star';
 import People from '@material-ui/icons/People';
 import Add from '@material-ui/icons/Add';
 import Favorite from '@material-ui/icons/Favorite';
@@ -28,17 +28,21 @@ import Parallax from '../../main/components/Parallax/Parallax.jsx';
 import Clearfix from '../../main/components/Clearfix/Clearfix.jsx';
 import Button from '../../main/components/CustomButtons/Button.jsx';
 
-import christian from '../../assets/images/profilePicture.jpg';
-import oluEletu from '../../assets/images/profilePicture.jpg';
-import clemOnojeghuo from '../../assets/images/profilePicture.jpg';
-import cynthiaDelRio from '../../assets/images/profilePicture.jpg';
-import mariyaGeorgieva from '../../assets/images/profilePicture.jpg';
+import william from '../../assets/images/profilePicture.jpg';
+import tftpImplementation from '../../assets/images/tftpImplementation.gif';
+import narutoProject from '../../assets/images/naruto-project.gif';
+import sexyPortfolio from '../../assets/images/sexy-portfolio.gif';
+import tcpStreamer from '../../assets/images/tcp-streamer.gif';
 import clemOnojegaw from '../../assets/images/profilePicture.jpg';
 import darrenColeshill from '../../assets/images/profilePicture.jpg';
 import avatar from '../../assets/images/profilePicture.jpg';
 import marc from '../../assets/images/profilePicture.jpg';
 import kendall from '../../assets/images/profilePicture.jpg';
 import cardProfile2Square from '../../assets/images/profilePicture.jpg';
+
+import linkedin from '../../assets/images/icons/linkedin-brands.svg';
+import github from '../../assets/images/icons/github-brands.svg';
+import instagram from '../../assets/images/icons/instagram-brands.svg';
 
 import profilePageStyle from '../components/profilePageStyle.jsx';
 
@@ -59,20 +63,20 @@ class ProfilePage extends React.Component {
     return (
       <div>
         <Header
-          brand="Material Kit PRO React"
+          brand="William Garneau"
           changeColorOnScroll={{
-            height: 200,
-            color: 'info',
+            height: 100,
+            color: 'warning',
           }}
           color="transparent"
           fixed
-          links={<HeaderLinks dropdownHoverColor="info" />}
+          links={<HeaderLinks dropdownHoverColor="warning" />}
           {...rest}
         />
         <Parallax
           className={classes.parallax}
           filter="dark"
-          image={require('../../assets/images/profilePicture.jpg')}
+          image={require('../../assets/images/minimalist-portfolio.gif')}
         />
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div className={classes.container}>
@@ -80,73 +84,76 @@ class ProfilePage extends React.Component {
               <GridItem md={6} sm={12} xs={12}>
                 <div className={classes.profile}>
                   <div>
-                    <img alt="..." className={imageClasses} src={christian} />
+                    <img alt="..." className={imageClasses} src={william} />
                   </div>
                   <div className={classes.name}>
-                    <h3 className={classes.title}>Christian Louboutin</h3>
-                    <h6>DESIGNER</h6>
+                    <h3 className={classes.title}>William Garneau</h3>
+                    <h6>DÉVELOPPEUR LOGICIEL</h6>
                     <Button
                       className={classes.margin5}
                       color="dribbble"
+                      href="https://www.linkedin.com/in/william-garneau-904707148/"
                       justIcon
                       simple
                     >
-                      <i className={classes.socials + ' fab fa-dribbble'} />
+                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 10 }} />
                     </Button>
                     <Button
                       className={classes.margin5}
                       color="twitter"
+                      href="https://github.com/Thyix"
                       justIcon
                       simple
                     >
-                      <i className={classes.socials + ' fab fa-twitter'} />
+                      <img alt="githubLogo" src={github} style={{ marginTop: 10 }} />
                     </Button>
                     <Button
                       className={classes.margin5}
                       color="pinterest"
+                      href="https://www.instagram.com/william_garneau/"
                       justIcon
                       simple
                     >
-                      <i className={classes.socials + ' fab fa-pinterest'} />
+                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 10 }} />
                     </Button>
                   </div>
                 </div>
-                <div className={classes.follow}>
+                <a className={classes.follow} href={'https://github.com/Thyix'}>
                   <Tooltip
                     classes={{ tooltip: classes.tooltip }}
                     id="tooltip-top"
                     placement="top"
-                    title="Follow this user"
+                    title="S'abonner sur Github"
                   >
                     <Button
                       className={classes.followButton}
-                      color="primary"
+                      color="warning"
                       justIcon
                       round
+
                     >
                       <Add className={classes.followIcon} />
                     </Button>
                   </Tooltip>
-                </div>
+                </a>
               </GridItem>
             </GridContainer>
             <div
               className={classNames(classes.description, classes.textCenter)}
             >
               <p>
-                An artist of considerable range, Chet Faker — the name taken by
-                Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
-                and records all of his own music, giving it a warm, intimate
-                feel with a solid groove structure.{' '}
+              J'ai 19 ans, je suis passionné par la programmation, l'intelligence artificielle,
+              la musique et le sport. J'étudie actuellement au Cégep Lévis-Lauzon en informatique
+              industrielle.
               </p>
             </div>
             <div className={classes.profileTabs}>
               <NavPills
                 alignCenter
-                color="primary"
+                color="warning"
                 tabs={[
                   {
-                    tabButton: 'Work',
+                    tabButton: 'Projets',
                     tabIcon: Palette,
                     tabContent: (
                       <GridContainer>
@@ -156,14 +163,14 @@ class ProfilePage extends React.Component {
                           sm={12}
                           xs={12}
                         >
-                          <h4 className={classes.title}>Latest Collections</h4>
+                          <h4 className={classes.title}>PROJETS RÉCENTS</h4>
                           <GridContainer className={classes.collections}>
                             <GridItem md={6} sm={12} xs={12}>
                               <Card
                                 background
                                 style={{
                                   backgroundImage:
-                                    'url(' + mariyaGeorgieva + ')',
+                                    'url(' + sexyPortfolio + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -175,11 +182,11 @@ class ProfilePage extends React.Component {
                                     className={classes.badge}
                                     color="warning"
                                   >
-                                    Spring 2016
+                                    Août 2018
                                   </Badge>
-                                  <a href="#pablo">
+                                  <a href="https://github.com/Thyix/sexy-portfolio">
                                     <h2 className={classes.cardTitleWhite}>
-                                      Stilleto
+                                      Beautiful Portfolio
                                     </h2>
                                   </a>
                                 </CardBody>
@@ -189,20 +196,20 @@ class ProfilePage extends React.Component {
                               <Card
                                 background
                                 style={{
-                                  backgroundImage: 'url(' + clemOnojeghuo + ')',
+                                  backgroundImage: 'url(' + narutoProject + ')',
                                 }}
                               >
-                                <a href="#pablo" />
+                                <a href="https://github.com/Thyix/naruto-project" />
                                 <CardBody
                                   background
                                   className={classes.cardBody}
                                 >
                                   <Badge className={classes.badge} color="info">
-                                    Spring 2016
+                                    Juin 2018
                                   </Badge>
-                                  <a href="#pablo">
+                                  <a href="https://github.com/Thyix/naruto-project">
                                     <h2 className={classes.cardTitleWhite}>
-                                      High Heels
+                                      3D Naruto Project
                                     </h2>
                                   </a>
                                 </CardBody>
@@ -212,7 +219,7 @@ class ProfilePage extends React.Component {
                               <Card
                                 background
                                 style={{
-                                  backgroundImage: 'url(' + oluEletu + ')',
+                                  backgroundImage: 'url(' + tftpImplementation + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -224,11 +231,11 @@ class ProfilePage extends React.Component {
                                     className={classes.badge}
                                     color="danger"
                                   >
-                                    Summer 2016
+                                    Avril 2018
                                   </Badge>
-                                  <a href="#pablo">
+                                  <a href="https://github.com/Thyix/tftp-implementation">
                                     <h2 className={classes.cardTitleWhite}>
-                                      Flats
+                                      TFTP Implementation
                                     </h2>
                                   </a>
                                 </CardBody>
@@ -239,7 +246,7 @@ class ProfilePage extends React.Component {
                                 background
                                 style={{
                                   backgroundImage:
-                                    'url(' + darrenColeshill + ')',
+                                    'url(' + tcpStreamer + ')',
                                 }}
                               >
                                 <a href="#pablo" />
@@ -251,11 +258,11 @@ class ProfilePage extends React.Component {
                                     className={classes.badge}
                                     color="success"
                                   >
-                                    Winter 2016
+                                    Janvier 2018
                                   </Badge>
-                                  <a href="#pablo">
+                                  <a href="https://github.com/Thyix/qt-tcp-streamer">
                                     <h2 className={classes.cardTitleWhite}>
-                                      Men's Sneakers
+                                      TCP Streamer
                                     </h2>
                                   </a>
                                 </CardBody>
@@ -269,38 +276,46 @@ class ProfilePage extends React.Component {
                           sm={12}
                           xs={12}
                         >
-                          <h4 className={classes.title}>Stats</h4>
+                          <h4 className={classes.title}>Évolution</h4>
                           <ul className={classes.listUnstyled}>
                             <li>
-                              <b>60</b> Products
+                              <b>16</b> Projets publics
                             </li>
                             <li>
-                              <b>4</b> Collections
+                              <b>3</b> Jeux vidéos créés
                             </li>
                             <li>
-                              <b>331</b> Influencers
+                              <b>3</b> Postes en informatique
                             </li>
                             <li>
-                              <b>1.2K</b> Likes
+                              <b>Étudiant en informatique industrielle</b>
                             </li>
                           </ul>
                           <hr />
-                          <h4 className={classes.title}>About this work</h4>
+                          <h4 className={classes.title}>Jeune développeur</h4>
                           <p className={classes.description}>
-                            French luxury footwear and fashion. The footwear has
-                            incorporated shiny, red-lacquered soles that have
-                            become his signature.
+                            Je programme depuis maintenant 2 ans.
+                            Je fais fréquemment des projets en .NET et les jeux vidéos.
+                            Fan de la programmation mobile et web, je publie du contenu relié à mes projets personnels et mes travaux d'école.
                           </p>
                           <hr />
-                          <h4 className={classes.title}>Focus</h4>
-                          <Badge color="primary">Footwear</Badge>
-                          <Badge color="rose">Luxury</Badge>
+                          <h4 className={classes.title}>Languages utilisés</h4>
+                          <Badge color="primary">C#</Badge>
+                          <Badge color="rose">C++</Badge>
+                          <Badge color="warning">js</Badge>
+                          <Badge color="success">Java</Badge>
+                          <Badge color="info">Python</Badge>
+                          <Badge color="primary">HTML5</Badge>
+                          <Badge color="rose">CSS3</Badge>
+                          <Badge color="warning">React</Badge>
+                          <Badge color="success">Vue</Badge>
+                          <Badge color="info">React Native</Badge>
                         </GridItem>
                       </GridContainer>
                     ),
                   },
                   {
-                    tabButton: 'Connections',
+                    tabButton: 'Expérience',
                     tabIcon: People,
                     tabContent: (
                       <div>
@@ -470,7 +485,7 @@ class ProfilePage extends React.Component {
                     ),
                   },
                   {
-                    tabButton: 'Media',
+                    tabButton: 'Loisirs',
                     tabIcon: Camera,
                     tabContent: (
                       <GridContainer justify="center">
@@ -478,7 +493,7 @@ class ProfilePage extends React.Component {
                           <img
                             alt="..."
                             className={navImageClasses}
-                            src={mariyaGeorgieva}
+                            src={narutoProject}
                           />
                           <img
                             alt="..."
@@ -490,17 +505,17 @@ class ProfilePage extends React.Component {
                           <img
                             alt="..."
                             className={navImageClasses}
-                            src={clemOnojeghuo}
+                            src={tftpImplementation}
                           />
                           <img
                             alt="..."
                             className={navImageClasses}
-                            src={oluEletu}
+                            src={william}
                           />
                           <img
                             alt="..."
                             className={navImageClasses}
-                            src={cynthiaDelRio}
+                            src={william}
                           />
                         </GridItem>
                       </GridContainer>

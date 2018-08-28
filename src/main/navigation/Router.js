@@ -8,7 +8,7 @@ export default function AppRouter() {
     <BrowserRouter>
       <div>
         <Switch>
-          <Route component={() => <Welcome />} exact path="/" />
+          <Route component={() => <ProfilePage />} exact path="/" />
         </Switch>
       </div>
     </BrowserRouter>
