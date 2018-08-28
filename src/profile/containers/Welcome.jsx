@@ -22,7 +22,7 @@ import instagram from '../../assets/images/icons/instagram-brands.svg';
 
 import profile from '../../assets/images/profilePicture.jpg';
 
-import profilePageStyle from '../../assets/jss/material-kit-react/views/profilePage.jsx';
+import profilePageStyle from '../components/profilePageStyle.jsx';
 
 type Props = {
   classes:any,
