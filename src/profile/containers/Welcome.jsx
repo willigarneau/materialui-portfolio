@@ -108,7 +108,7 @@ function Welcome({ classes, rest }:Props) {
                       tabIcon: Camera,
                       tabContent: (
                         <GridContainer justify="center">
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={12} sm={12} xs={6}>
                             <ProjectCard
                               className={navImageClasses}
                               description={'🕺 Top down 3D fighting game based on the naruto anime. Created with Unity 3D and Photon Cloud Engine. 🎮'}
@@ -116,8 +116,15 @@ function Welcome({ classes, rest }:Props) {
                               img={'narutoProject'}
                               link={'https://github.com/Thyix/naruto-project'}
                             />
+                            <ProjectCard
+                              className={navImageClasses}
+                              description={'📂 💻 Client & Server implementation of the trivial file transfer protocol made in C# windows form'}
+                              headLine={'TFTP implementation'}
+                              img={'tftpImplementation'}
+                              link={'https://github.com/Thyix/tftp-implementation'}
+                            />
                           </GridItem>
-                          <GridItem md={4} sm={12} xs={12}>
+                          <GridItem md={12} sm={12} xs={12}>
                             <img
                               alt="..."
                               className={navImageClasses}
