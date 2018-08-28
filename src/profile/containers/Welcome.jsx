@@ -24,6 +24,8 @@ import profile from '../../assets/images/profilePicture.jpg';
 
 import profilePageStyle from '../components/profilePageStyle.jsx';
 
+// commit comment
+
 type Props = {
   classes:any,
   rest:any,
