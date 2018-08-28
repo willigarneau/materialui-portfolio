@@ -31,7 +31,7 @@ class Accordion extends React.Component {
     }
   }
 
-  handleChange = panel => (event, expanded) => {
+  handleChange = panel => () => {
     let newArray;
 
     if (this.state.single) {

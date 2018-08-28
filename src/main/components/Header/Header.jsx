@@ -28,12 +28,14 @@ class Header extends React.Component {
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
-  handleDrawerToggle() {
-    this.setState({ mobileOpen: !this.state.mobileOpen });
-  }
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
       window.addEventListener('scroll', this.headerColorChange);
+    }
+  }
+  componentWillUnmount() {
+    if (this.props.changeColorOnScroll) {
+      window.removeEventListener('scroll', this.headerColorChange);
     }
   }
   headerColorChange() {
@@ -55,10 +57,8 @@ class Header extends React.Component {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   }
-  componentWillUnmount() {
-    if (this.props.changeColorOnScroll) {
-      window.removeEventListener('scroll', this.headerColorChange);
-    }
+  handleDrawerToggle() {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
   }
   render() {
     const { classes, color, links, brand, fixed, absolute } = this.props;

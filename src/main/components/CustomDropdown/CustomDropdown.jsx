@@ -141,7 +141,7 @@ class CustomDropdown extends React.Component {
           placement={dropPlacement}
           transition
         >
-          {({ TransitionProps, placement }) => (
+          {() => (
             <Grow
               id="menu-list"
               in={open}
