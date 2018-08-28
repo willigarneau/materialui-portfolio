@@ -49,7 +49,7 @@ function Welcome({ classes, rest }:Props) {
         rightLinks={<HeaderLinks />}
         {...rest}
       />
-      <Parallax big filter image={require('../../assets/images/minimalist-portfolio.gif')} medium />
+      <Parallax filter image={require('../../assets/images/minimalist-portfolio.gif')} small />
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div>
           <div className={classes.container}>
