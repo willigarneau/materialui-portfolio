@@ -19,9 +19,6 @@ function Footer(props) {
     [classes.big]: big || children !== undefined,
     [className]: className !== undefined,
   });
-  const aClasses = classNames({
-    [classes.a]: true,
-  });
 
   return (
     <footer className={footerClasses}>
