@@ -1,6 +1,5 @@
-/* eslint-disable */
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
 // nodejs library to set properties for components
@@ -15,8 +14,9 @@ import Hidden from '@material-ui/core/Hidden';
 import Drawer from '@material-ui/core/Drawer';
 // @material-ui/icons
 import Menu from '@material-ui/icons/Menu';
+import Close from '@material-ui/icons/Close';
 // core components
-import headerStyle from '../../../assets/jss/material-kit-react/components/headerStyle.jsx';
+import headerStyle from '../../../assets/jss/material-kit-pro-react/components/headerStyle.jsx';
 
 class Header extends React.Component {
 
@@ -28,12 +28,14 @@ class Header extends React.Component {
     this.handleDrawerToggle = this.handleDrawerToggle.bind(this);
     this.headerColorChange = this.headerColorChange.bind(this);
   }
-  handleDrawerToggle() {
-    this.setState({ mobileOpen: !this.state.mobileOpen });
-  }
   componentDidMount() {
     if (this.props.changeColorOnScroll) {
       window.addEventListener('scroll', this.headerColorChange);
+    }
+  }
+  componentWillUnmount() {
+    if (this.props.changeColorOnScroll) {
+      window.removeEventListener('scroll', this.headerColorChange);
     }
   }
   headerColorChange() {
@@ -55,43 +57,25 @@ class Header extends React.Component {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   }
-  componentWillUnmount() {
-    if (this.props.changeColorOnScroll) {
-      window.removeEventListener('scroll', this.headerColorChange);
-    }
+  handleDrawerToggle() {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
   }
   render() {
-    const {
-      classes,
-      color,
-      rightLinks,
-      leftLinks,
-      brand,
-      fixed,
-      absolute,
-    } = this.props;
+    const { classes, color, links, brand, fixed, absolute } = this.props;
     const appBarClasses = classNames({
       [classes.appBar]: true,
       [classes[color]]: color,
       [classes.absolute]: absolute,
       [classes.fixed]: fixed,
     });
-    const brandComponent = <Button className={classes.title}>{brand}</Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
-          {leftLinks !== undefined ? brandComponent : null}
-          <div className={classes.flex}>
-            {leftLinks !== undefined ? (
-              <Hidden implementation="css" smDown>
-                {leftLinks}
-              </Hidden>
-            ) : 
-              brandComponent
-            }
-          </div>
-          <Hidden implementation="css" smDown>
-            {rightLinks}
+          <Button className={classes.title}>
+            <Link to="/">{brand}</Link>
+          </Button>
+          <Hidden className={classes.hidden} implementation="css" smDown>
+            <div className={classes.collapse}>{links}</div>
           </Hidden>
           <Hidden mdUp>
             <IconButton
@@ -105,18 +89,23 @@ class Header extends React.Component {
         </Toolbar>
         <Hidden implementation="css" mdUp>
           <Drawer
-            anchor={"right"}
+            anchor={'right'}
             classes={{
-              paper: classes.drawerPaper
+              paper: classes.drawerPaper,
             }}
             onClose={this.handleDrawerToggle}
             open={this.state.mobileOpen}
             variant="temporary"
           >
-            <div className={classes.appResponsive}>
-              {leftLinks}
-              {rightLinks}
-            </div>
+            <IconButton
+              aria-label="open drawer"
+              className={classes.closeButtonDrawer}
+              color="inherit"
+              onClick={this.handleDrawerToggle}
+            >
+              <Close />
+            </IconButton>
+            <div className={classes.appResponsive}>{links}</div>
           </Drawer>
         </Hidden>
       </AppBar>
@@ -142,8 +131,7 @@ Header.propTypes = {
     'rose',
     'dark',
   ]),
-  rightLinks: PropTypes.node,
-  leftLinks: PropTypes.node,
+  links: PropTypes.node,
   brand: PropTypes.string,
   fixed: PropTypes.bool,
   absolute: PropTypes.bool,

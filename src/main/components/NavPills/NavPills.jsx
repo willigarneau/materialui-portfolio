@@ -7,14 +7,14 @@ import SwipeableViews from 'react-swipeable-views';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
-import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import Tabs from '@material-ui/core/Tabs';
 
 // core components
 import GridContainer from '../Grid/GridContainer.jsx';
 import GridItem from '../Grid/GridItem.jsx';
 
-import navPillsStyle from '../../../assets/jss/material-kit-react/components/navPillsStyle.jsx';
+import navPillsStyle from '../../../assets/jss/material-kit-pro-react/components/navPillsStyle.jsx';
 
 class NavPills extends React.Component {
 

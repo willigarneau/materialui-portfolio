@@ -1,17 +1,22 @@
 import React from 'react';
+// nodejs library that concatenates classes
+import classNames from 'classnames';
 // nodejs library to set properties for components
 import PropTypes from 'prop-types';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 
-import badgeStyle from '../../../assets/jss/material-kit-react/components/badgeStyle.jsx';
+import badgeStyle from '../../../assets/jss/material-kit-pro-react/components/badgeStyle.jsx';
 
 function Badge({ ...props }) {
-  const { classes, color, children } = props;
-  return (
-    <span className={classes.badge + ' ' + classes[color]}>{children}</span>
-  );
+  const { classes, color, children, className } = props;
+  const badgeClasses = classNames({
+    [classes.badge]: true,
+    [classes[color]]: true,
+    [className]: className !== undefined,
+  });
+  return <span className={badgeClasses}>{children}</span>;
 }
 
 Badge.defaultProps = {
@@ -29,6 +34,7 @@ Badge.propTypes = {
     'rose',
     'gray',
   ]),
+  className: PropTypes.string,
 };
 
 export default withStyles(badgeStyle)(Badge);

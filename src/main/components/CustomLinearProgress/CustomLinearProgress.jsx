@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import LinearProgress from '@material-ui/core/LinearProgress';
-// core components
-import customLinearProgressStyle from '../../../assets/jss/material-kit-react/components/customLinearProgressStyle.jsx';
+
+import customLinearProgressStyle from '../../../assets/jss/material-kit-pro-react/components/customLinearProgressStyle.jsx';
 
 function CustomLinearProgress({ ...props }) {
   const { classes, color, ...rest } = props;

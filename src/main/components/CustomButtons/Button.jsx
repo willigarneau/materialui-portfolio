@@ -1,18 +1,16 @@
 import React from 'react';
-// nodejs library to set properties for components
-import PropTypes from 'prop-types';
 // nodejs library that concatenates classes
 import classNames from 'classnames';
+// nodejs library to set properties for components
+import PropTypes from 'prop-types';
 
 // @material-ui/core components
 import withStyles from '@material-ui/core/styles/withStyles';
 import Button from '@material-ui/core/Button';
 
-// core components
+import buttonStyle from '../../../assets/jss/material-kit-pro-react/components/buttonStyle.jsx';
 
-import buttonStyle from '../../../assets/jss/material-kit-react/components/buttonStyle.jsx';
-
-function RegularButton({ ...props }) {
+function RegularButton(props) {
   const {
     classes,
     color,
@@ -25,6 +23,7 @@ function RegularButton({ ...props }) {
     block,
     link,
     justIcon,
+    fileButton,
     className,
     ...rest
   } = props;
@@ -39,6 +38,7 @@ function RegularButton({ ...props }) {
     [classes.block]: block,
     [classes.link]: link,
     [classes.justIcon]: justIcon,
+    [classes.fileButton]: fileButton,
     [className]: className,
   });
   return (
@@ -52,16 +52,25 @@ RegularButton.propTypes = {
   classes: PropTypes.object.isRequired,
   color: PropTypes.oneOf([
     'primary',
+    'secondary',
     'info',
     'success',
     'warning',
     'danger',
     'rose',
     'white',
-    'facebook',
     'twitter',
+    'facebook',
     'google',
+    'linkedin',
+    'pinterest',
+    'youtube',
+    'tumblr',
     'github',
+    'behance',
+    'dribbble',
+    'reddit',
+    'instagram',
     'transparent',
   ]),
   size: PropTypes.oneOf(['sm', 'lg']),
@@ -72,6 +81,7 @@ RegularButton.propTypes = {
   block: PropTypes.bool,
   link: PropTypes.bool,
   justIcon: PropTypes.bool,
+  fileButton: PropTypes.bool,
 };
 
 export default withStyles(buttonStyle)(RegularButton);

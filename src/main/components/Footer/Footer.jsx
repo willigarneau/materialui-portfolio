@@ -1,59 +1,38 @@
-/*eslint-disable*/
 import React from 'react';
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 // nodejs library that concatenates classes
-import classNames from "classnames";
-import { List, ListItem, withStyles } from "@material-ui/core";
+import classNames from 'classnames';
+// @material-ui/core components
+import withStyles from '@material-ui/core/styles/withStyles';
+// @material-ui/icons
 
-import footerStyle from "../../../assets/jss/material-kit-react/components/footerStyle.jsx";
+import footerStyle from '../../../assets/jss/material-kit-pro-react/components/footerStyle.jsx';
 
-function Footer({ ...props }) {
-  const { classes, whiteFont } = props;
+function Footer(props) {
+  const { children, content, classes, theme, big, className } = props;
+  const themeType =
+    !(theme === 'transparent' || theme === undefined);
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes[theme]]: themeType,
+    [classes.big]: big || children !== undefined,
+    [className]: className !== undefined,
   });
-  const aClasses = classNames({
-    [classes.a]: true,
-    [classes.footerWhiteFont]: whiteFont
-  });
+
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
-        <div className={classes.left}>
-          <List className={classes.list}>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://github.com/Thyix/sexy-portfolio"
-                className={classes.block}
-                target="_blank"
-              >
-                Github
-              </a>
-            </ListItem>
-            <ListItem className={classes.inlineBlock}>
-              <a
-                href="https://github.com/Thyix/sexy-portfolio"
-                className={classes.block}
-                target="_blank"
-              >
-                À propos
-              </a>
-            </ListItem>
-          </List>
-        </div>
-        <div className={classes.right}>
-          &copy; {1900 + new Date().getYear()}, fait par {' '}
-          <a
-            href="https://www.linkedin.com/in/william-garneau-904707148/"
-            className={aClasses}
-            target="_blank"
-          >
-            William Garneau
-          </a>{" "}
-          | Développeur logiciel
-        </div>
+        {children !== undefined ? (
+          <div>
+            <div className={classes.content}>{children}</div>
+            <hr />
+          </div>
+        ) :
+          ' '
+        }
+        {content}
+        <div className={classes.clearFix} />
       </div>
     </footer>
   );
@@ -61,7 +40,9 @@ function Footer({ ...props }) {
 
 Footer.propTypes = {
   classes: PropTypes.object.isRequired,
-  whiteFont: PropTypes.bool
+  theme: PropTypes.oneOf(['dark', 'white', 'transparent']),
+  big: PropTypes.bool,
+  content: PropTypes.node.isRequired,
 };
 
 export default withStyles(footerStyle)(Footer);

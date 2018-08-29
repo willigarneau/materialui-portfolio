@@ -8,14 +8,36 @@ import withStyles from '@material-ui/core/styles/withStyles';
 // @material-ui/icons
 
 // core components
-import cardStyle from '../../../assets/jss/material-kit-react/components/cardStyle.jsx';
+import cardStyle from '../../../assets/jss/material-kit-pro-react/components/cardStyle.jsx';
 
 function Card({ ...props }) {
-  const { classes, className, children, plain, carousel, ...rest } = props;
+  const {
+    classes,
+    className,
+    children,
+    plain,
+    profile,
+    blog,
+    raised,
+    background,
+    pricing,
+    color,
+    product,
+    testimonial,
+    ...rest
+  } = props;
   const cardClasses = classNames({
     [classes.card]: true,
     [classes.cardPlain]: plain,
-    [classes.cardCarousel]: carousel,
+    [classes.cardProfile]: profile || testimonial,
+    [classes.cardBlog]: blog,
+    [classes.cardRaised]: raised,
+    [classes.cardBackground]: background,
+    [classes.cardPricingColor]:
+      (pricing && color !== undefined) || (pricing && background !== undefined),
+    [classes[color]]: color,
+    [classes.cardPricing]: pricing,
+    [classes.cardProduct]: product,
     [className]: className !== undefined,
   });
   return (
@@ -29,7 +51,21 @@ Card.propTypes = {
   classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   plain: PropTypes.bool,
-  carousel: PropTypes.bool,
+  profile: PropTypes.bool,
+  blog: PropTypes.bool,
+  raised: PropTypes.bool,
+  background: PropTypes.bool,
+  pricing: PropTypes.bool,
+  testimonial: PropTypes.bool,
+  color: PropTypes.oneOf([
+    'primary',
+    'info',
+    'success',
+    'warning',
+    'danger',
+    'rose',
+  ]),
+  product: PropTypes.bool,
 };
 
 export default withStyles(cardStyle)(Card);

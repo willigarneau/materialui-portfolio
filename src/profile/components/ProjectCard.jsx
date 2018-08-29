@@ -8,6 +8,7 @@ import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 
 import narutoProject from '../../assets/images/naruto-project.gif';
+import tftpImplementation from '../../assets/images/tftpImplementation.gif';
 
 const styles = {
   card: {
@@ -30,6 +31,7 @@ type Props = {
 
 const imgAssociation = [
   ['narutoProject', narutoProject],
+  ['tftpImplementation', tftpImplementation],
 ];
 
 function ProjectCard({ classes, img, imgDescription, headLine, description, link }:Props) {
