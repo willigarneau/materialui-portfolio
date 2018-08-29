@@ -13,7 +13,7 @@ import Icon from '@material-ui/core/Icon';
 
 // @material-ui/icons
 import Apps from '@material-ui/icons/Apps';
-import ShoppingCart from '@material-ui/icons/ShoppingCart';
+import LocationOnLocationOn from '@material-ui/icons/LocationOn';
 import ViewDay from '@material-ui/icons/ViewDay';
 import Dns from '@material-ui/icons/Dns';
 import Build from '@material-ui/icons/Build';
@@ -104,7 +104,7 @@ function HeaderLinks({ ...props }) {
           round
           target="_blank"
         >
-          <ShoppingCart className={classes.icons} />  Contactez-moi
+          <LocationOn className={classes.icons} />  Contactez-moi
         </Button>
       </ListItem>
     </List>
