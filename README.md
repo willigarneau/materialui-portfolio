@@ -5,6 +5,7 @@
   <h5 align="center">sexy-portfolio</h5> 
   <p align="center">
   <img src="https://travis-ci.com/Thyix/sexy-portfolio.svg?branch=master">
+  <img src="https://www.codetriage.com/thyix/sexy-portfolio/badges/users.svg">
   </p>
   <h1 align="center">👨‍💻 Best web portfolio for developers 🍾</h1>
 
