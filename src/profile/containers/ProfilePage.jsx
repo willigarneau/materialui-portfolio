@@ -11,7 +11,6 @@ import Camera from '@material-ui/icons/Camera';
 import Palette from '@material-ui/icons/Star';
 import People from '@material-ui/icons/People';
 import Add from '@material-ui/icons/Add';
-import Favorite from '@material-ui/icons/Favorite';
 // core components
 import Header from '../../main/components/Header/Header.jsx';
 import Footer from '../../main/components/Footer/Footer.jsx';
@@ -33,12 +32,6 @@ import tftpImplementation from '../../assets/images/tftpImplementation.gif';
 import narutoProject from '../../assets/images/naruto-project.gif';
 import sexyPortfolio from '../../assets/images/sexy-portfolio.gif';
 import tcpStreamer from '../../assets/images/tcp-streamer.gif';
-import clemOnojegaw from '../../assets/images/profilePicture.jpg';
-import darrenColeshill from '../../assets/images/profilePicture.jpg';
-import avatar from '../../assets/images/profilePicture.jpg';
-import marc from '../../assets/images/profilePicture.jpg';
-import kendall from '../../assets/images/profilePicture.jpg';
-import cardProfile2Square from '../../assets/images/profilePicture.jpg';
 
 import linkedin from '../../assets/images/icons/linkedin-brands.svg';
 import github from '../../assets/images/icons/github-brands.svg';
@@ -96,7 +89,7 @@ class ProfilePage extends React.Component {
                       justIcon
                       simple
                     >
-                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 10 }} />
+                      <img alt="linkedinLogo" src={linkedin} style={{ marginTop: 17 }} />
                     </Button>
                     <Button
                       className={classes.margin5}
@@ -105,7 +98,7 @@ class ProfilePage extends React.Component {
                       justIcon
                       simple
                     >
-                      <img alt="githubLogo" src={github} style={{ marginTop: 10 }} />
+                      <img alt="githubLogo" src={github} style={{ marginTop: 17 }} />
                     </Button>
                     <Button
                       className={classes.margin5}
@@ -114,7 +107,7 @@ class ProfilePage extends React.Component {
                       justIcon
                       simple
                     >
-                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 10 }} />
+                      <img alt="instagramLogo" src={instagram} style={{ marginTop: 17 }} />
                     </Button>
                   </div>
                 </div>
@@ -331,12 +324,12 @@ class ProfilePage extends React.Component {
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img alt="..." src={avatar} />
+                                      <img alt="..." src={william} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + avatar + ')',
+                                        backgroundImage: 'url(' + william + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -371,12 +364,12 @@ class ProfilePage extends React.Component {
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img alt="..." src={marc} />
+                                      <img alt="..." src={william} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + marc + ')',
+                                        backgroundImage: 'url(' + william + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -413,12 +406,12 @@ class ProfilePage extends React.Component {
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img alt="..." src={kendall} />
+                                      <img alt="..." src={william} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + kendall + ')',
+                                        backgroundImage: 'url(' + william + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -452,13 +445,13 @@ class ProfilePage extends React.Component {
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
                                     <a href="#pablo">
-                                      <img alt="..." src={cardProfile2Square} />
+                                      <img alt="..." src={william} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
                                         backgroundImage:
-                                          'url(' + cardProfile2Square + ')',
+                                          'url(' + william + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -498,7 +491,7 @@ class ProfilePage extends React.Component {
                           <img
                             alt="..."
                             className={navImageClasses}
-                            src={clemOnojegaw}
+                            src={william}
                           />
                         </GridItem>
                         <GridItem md={3} sm={12} xs={12}>
@@ -535,42 +528,34 @@ class ProfilePage extends React.Component {
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="https://www.creative-tim.com/"
+                      href="https://github.com/Thyix/sexy-portfolio"
                     >
-                      Creative Tim
+                      Sexy-Portfolio
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="https://www.creative-tim.com/presentation"
+                      href="https://github.com/Thyix"
                     >
-                      About us
+                      Github
                     </a>
                   </ListItem>
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="//blog.creative-tim.com/"
+                      href="https://github.com/Thyix"
                     >
-                      Blog
-                    </a>
-                  </ListItem>
-                  <ListItem className={classes.inlineBlock}>
-                    <a
-                      className={classes.block}
-                      href="https://www.creative-tim.com/license"
-                    >
-                      Licenses
+                      Contactez-moi
                     </a>
                   </ListItem>
                 </List>
               </div>
               <div className={classes.right}>
-                &copy; {1900 + new Date().getYear()} , made with{' '}
-                <Favorite className={classes.icon} /> by{' '}
-                <a href="https://www.creative-tim.com">Creative Tim</a> for a
-                better web.
+                &copy; {1900 + new Date().getYear()} , Fait{' '}
+                par{' '}
+                <a href="https://github.com/Thyix">William Garneau</a> pour vous faciliter
+                la vie.
               </div>
             </div>
           }
