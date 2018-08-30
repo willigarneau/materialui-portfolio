@@ -7,7 +7,7 @@ import Tooltip from '@material-ui/core/Tooltip';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 // @material-ui/icons
-import Camera from '@material-ui/icons/Camera';
+import Book from '@material-ui/icons/Book';
 import Palette from '@material-ui/icons/Star';
 import People from '@material-ui/icons/People';
 import Add from '@material-ui/icons/Add';
@@ -32,6 +32,14 @@ import tftpImplementation from '../../assets/images/tftpImplementation.gif';
 import narutoProject from '../../assets/images/naruto-project.gif';
 import sexyPortfolio from '../../assets/images/sexy-portfolio.gif';
 import tcpStreamer from '../../assets/images/tcp-streamer.gif';
+
+import Nexapp from '../../assets/images/nexapp.jpg';
+import Vapofoin from '../../assets/images/vapofoin.jpeg';
+import Canac from '../../assets/images/canac.png';
+import Micrologic from '../../assets/images/micrologic.png';
+
+import cegep from '../../assets/images/cegep.png';
+import collegeDeLevis from '../../assets/images/college-de-levis.png';
 
 import linkedin from '../../assets/images/icons/linkedin-brands.svg';
 import github from '../../assets/images/icons/github-brands.svg';
@@ -58,7 +66,7 @@ class ProfilePage extends React.Component {
         <Header
           brand="William Garneau"
           changeColorOnScroll={{
-            height: 100,
+            height: 225,
             color: 'warning',
           }}
           color="transparent"
@@ -323,13 +331,13 @@ class ProfilePage extends React.Component {
                               <GridContainer>
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
-                                    <a href="#pablo">
-                                      <img alt="..." src={william} />
+                                    <a href="https://www.nexapp.ca/">
+                                      <img alt="..." src={Nexapp} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + william + ')',
+                                        backgroundImage: 'url(' + Nexapp + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -338,15 +346,13 @@ class ProfilePage extends React.Component {
                                 <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
-                                      Gigi Hadid
+                                      Technologies Nexapp
                                     </h4>
                                     <Muted>
-                                      <h6>MODEL</h6>
+                                      <h6>DÉVELOPPEUR LOGICIEL</h6>
                                     </Muted>
-                                    <p className={classes.description}>
-                                      Don't be scared of the truth because we
-                                      need to restart the human foundation in
-                                      truth...
+                                    <p className={classes.description} style={{ marginTop: -10 }}>
+                                      Création d'applications mobiles et web en React et React Native.
                                     </p>
                                   </CardBody>
                                 </GridItem>
@@ -363,13 +369,13 @@ class ProfilePage extends React.Component {
                               <GridContainer>
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
-                                    <a href="#pablo">
-                                      <img alt="..." src={william} />
+                                    <a href="http://vapofoin.com/">
+                                      <img alt="..." src={Vapofoin} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + william + ')',
+                                        backgroundImage: 'url(' + Vapofoin + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -378,15 +384,14 @@ class ProfilePage extends React.Component {
                                 <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
-                                      Marc Jacobs
+                                      Vapofoin INC.
                                     </h4>
                                     <Muted>
-                                      <h6>DESIGNER</h6>
+                                      <h6>PRÉSIDENT/PROPRIÉTAIRE</h6>
                                     </Muted>
-                                    <p className={classes.description}>
-                                      Don't be scared of the truth because we
-                                      need to restart the human foundation in
-                                      truth...
+                                    <p className={classes.description} style={{ marginTop: -10 }}>
+                                      Entreprise de purificateurs à foin pour chevaux établie
+                                      depuis maintenant près de 4 ans.
                                     </p>
                                   </CardBody>
                                 </GridItem>
@@ -405,13 +410,13 @@ class ProfilePage extends React.Component {
                               <GridContainer>
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
-                                    <a href="#pablo">
-                                      <img alt="..." src={william} />
+                                    <a href="http://www.canac.ca/fr/index.aspx">
+                                      <img alt="..." src={Canac} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
-                                        backgroundImage: 'url(' + william + ')',
+                                        backgroundImage: 'url(' + Canac + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -420,14 +425,13 @@ class ProfilePage extends React.Component {
                                 <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
-                                      Kendall Jenner
+                                      Canac
                                     </h4>
                                     <Muted>
-                                      <h6>MODEL</h6>
+                                      <h6>PRÉPOSÉ À LA COURS</h6>
                                     </Muted>
-                                    <p className={classes.description}>
-                                      I love you like Kanye loves Kanye. Don't
-                                      be scared of the truth.
+                                    <p className={classes.description} style={{ marginTop: -10 }}>
+                                      Service à la clientèle et transport de matériaux lourds dans le domaine de la construction.
                                     </p>
                                   </CardBody>
                                 </GridItem>
@@ -444,14 +448,14 @@ class ProfilePage extends React.Component {
                               <GridContainer>
                                 <GridItem md={5} sm={12} xs={12}>
                                   <CardHeader image plain>
-                                    <a href="#pablo">
-                                      <img alt="..." src={william} />
+                                    <a href="https://www.micrologic.ca/">
+                                      <img alt="..." src={Micrologic} />
                                     </a>
                                     <div
                                       className={classes.coloredShadow}
                                       style={{
                                         backgroundImage:
-                                          'url(' + william + ')',
+                                          'url(' + Micrologic + ')',
                                         opacity: '1',
                                       }}
                                     />
@@ -460,13 +464,14 @@ class ProfilePage extends React.Component {
                                 <GridItem md={7} sm={12} xs={12}>
                                   <CardBody plain>
                                     <h4 className={classes.cardTitle}>
-                                      George West
+                                      Micrologic (2016)
                                     </h4>
                                     <Muted>
-                                      <h6>MODEL/DJ</h6>
+                                      <h6>ASSOCIÉ AUX VENTES</h6>
                                     </Muted>
-                                    <p className={classes.description}>
-                                      I love you like Kanye loves Kanye.
+                                    <p className={classes.description} style={{ marginTop: -10 }}>
+                                      Vendeur au détail et technicien.
+                                      Réparation d'ordinateurs et vente de produits Apple.
                                     </p>
                                   </CardBody>
                                 </GridItem>
@@ -478,40 +483,53 @@ class ProfilePage extends React.Component {
                     ),
                   },
                   {
-                    tabButton: 'Loisirs',
-                    tabIcon: Camera,
+                    tabButton: 'Formation',
+                    tabIcon: Book,
                     tabContent: (
+
                       <GridContainer justify="center">
-                        <GridItem md={3} sm={12} xs={12}>
-                          <img
-                            alt="..."
-                            className={navImageClasses}
-                            src={narutoProject}
-                          />
-                          <img
-                            alt="..."
-                            className={navImageClasses}
-                            src={william}
-                          />
-                        </GridItem>
-                        <GridItem md={3} sm={12} xs={12}>
-                          <img
-                            alt="..."
-                            className={navImageClasses}
-                            src={tftpImplementation}
-                          />
-                          <img
-                            alt="..."
-                            className={navImageClasses}
-                            src={william}
-                          />
-                          <img
-                            alt="..."
-                            className={navImageClasses}
-                            src={william}
-                          />
+                        <GridItem
+                          className={classes.gridItem}
+                          md={5}
+                          sm={12}
+                          xs={12}
+                        >
+                          <Card className={classes.card} plain profile>
+                            <GridContainer>
+                              <GridItem md={12} sm={12} xs={12}>
+                                <CardHeader image plain>
+                                  <a href="Cégep Lévis-Lauzon">
+                                    <img alt="..." src={cegep} />
+                                  </a>
+                                  <div
+                                    className={classes.coloredShadow}
+                                    style={{
+                                      backgroundImage: 'url(' + cegep + ')',
+                                      opacity: '1',
+                                    }}
+                                  />
+                                </CardHeader>
+                              </GridItem>
+                              <GridItem md={7} sm={12} xs={12}>
+                                <CardBody plain>
+                                  <h4 className={classes.cardTitle}>
+                                      Cégep Lévis-Lauzon
+                                  </h4>
+                                  <Muted>
+                                    <h6>ÉTUDIANT EN INFORMATIQUE INDUSTRIELLE</h6>
+                                  </Muted>
+                                  <p className={classes.description} style={{ marginTop: -10 }}>
+                                      3e et dernière année de technique de l'informatique industrielle.
+                                      Apprentissage de divers languages de programmation et des pratiques
+                                      d'architecture propre à l'industrie logicielle.
+                                  </p>
+                                </CardBody>
+                              </GridItem>
+                            </GridContainer>
+                          </Card>
                         </GridItem>
                       </GridContainer>
+
                     ),
                   },
                 ]}
