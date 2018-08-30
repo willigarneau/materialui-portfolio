@@ -85,22 +85,12 @@ function HeaderLinks({ ...props }) {
   const { classes, dropdownHoverColor } = props;
   return (
     <List className={classes.list + ' ' + classes.mlAuto}>
-      <ListItem className={classes.listItem}>
-      <Button
-          className={classes.navButton}
-          color={window.innerWidth < 960 ? 'transparent' : 'transparent'}
-          href="https://www.linkedin.com/in/william-garneau-904707148/"
-          round
-          target="_blank"
-      >
-        <Face className={classes.icons}/> À propos
-      </Button>
-      </ListItem>
       <ListItem>
         <Button
           className={classes.navButton}
           color={window.innerWidth < 960 ? 'info' : 'white'}
           href="/contact"
+          onclick="return false;"
           round
           target="_blank"
         >

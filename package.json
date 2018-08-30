@@ -15,6 +15,7 @@
     "classnames":"^2.2.6",
     "react-swipeable-views":"^0.12.16",
     "react-i18next": "7.10.1",
+    "react-google-maps":"^9.4.5",
     "i18next": "11.5.0",
     "i18next-browser-languagedetector": "2.2.2",
     "react-router": "4.2.0",
