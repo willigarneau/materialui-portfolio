@@ -60,7 +60,6 @@ class ProfilePage extends React.Component {
       classes.imgRoundedCircle,
       classes.imgFluid,
     );
-    const navImageClasses = classNames(classes.imgRounded, classes.imgGallery);
     return (
       <div>
         <Header
@@ -499,6 +498,46 @@ class ProfilePage extends React.Component {
                               <GridItem md={12} sm={12} xs={12}>
                                 <CardHeader image plain>
                                   <a href="Cégep Lévis-Lauzon">
+                                    <img alt="..." src={collegeDeLevis} />
+                                  </a>
+                                  <div
+                                    className={classes.coloredShadow}
+                                    style={{
+                                      backgroundImage: 'url(' + collegeDeLevis + ')',
+                                      opacity: '1',
+                                    }}
+                                  />
+                                </CardHeader>
+                              </GridItem>
+                              <GridItem md={12} sm={12} xs={12}>
+                                <CardBody plain>
+                                  <h4 className={classes.cardTitle}>
+                                      Collège de Lévis
+                                  </h4>
+                                  <Muted>
+                                    <h6>DIPLÔME D'ÉTUDES SECONDAIRES</h6>
+                                  </Muted>
+                                  <p className={classes.description} style={{ marginTop: -10 }}>
+                                      Fin en 2016. J'ai complété les cours de mathématiques avancées,
+                                      de chimie et de physique.
+                                  </p>
+                                </CardBody>
+                              </GridItem>
+                            </GridContainer>
+                          </Card>
+                        </GridItem>
+
+                        <GridItem
+                          className={classes.gridItem}
+                          md={5}
+                          sm={12}
+                          xs={12}
+                        >
+                          <Card className={classes.card} plain profile>
+                            <GridContainer>
+                              <GridItem md={12} sm={12} xs={12}>
+                                <CardHeader image plain>
+                                  <a href="Cégep Lévis-Lauzon">
                                     <img alt="..." src={cegep} />
                                   </a>
                                   <div
@@ -521,7 +560,7 @@ class ProfilePage extends React.Component {
                                   <p className={classes.description} style={{ marginTop: -10 }}>
                                       3e et dernière année de technique de l'informatique industrielle.
                                       Apprentissage de divers languages de programmation et des pratiques
-                                      d'architecture propre à l'industrie logicielle.
+                                      d'architecture propres à l'industrie logicielle.
                                   </p>
                                 </CardBody>
                               </GridItem>
