@@ -31,7 +31,7 @@ import contactUsStyle from '../../assets/jss/material-kit-pro-react/views/contac
 
 const CustomSkinMap = withScriptjs(withGoogleMap(props => (
   <GoogleMap
-    defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
+    defaultCenter={{ lat: 46.8292716, lng: -71.054464 }}
     defaultOptions={{
       scrollwheel: false,
       zoomControl: true,
@@ -235,7 +235,7 @@ class ContactUsPage extends React.Component {
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="https://www.creative-tim.com/"
+                      href="https://github.com/Thyix/sexy-portfolio"
                     >
                       SEXY-PORTFOLIO
                     </a>
@@ -243,7 +243,7 @@ class ContactUsPage extends React.Component {
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="https://www.creative-tim.com/presentation"
+                      href="https://github.com/Thyix"
                       onClick="return false;"
                     >
                       GITHUB
@@ -252,7 +252,7 @@ class ContactUsPage extends React.Component {
                   <ListItem className={classes.inlineBlock}>
                     <a
                       className={classes.block}
-                      href="//blog.creative-tim.com/"
+                      href="/"
                     >
                       PROFIL
                     </a>
