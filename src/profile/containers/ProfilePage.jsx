@@ -39,7 +39,7 @@ import Canac from '../../assets/images/canac.png';
 import Micrologic from '../../assets/images/micrologic.png';
 
 import cegep from '../../assets/images/cegep.png';
-import collegeDeLevis from '../../assets/images/college-de-levis.png';
+import collegeDeLevis from '../../assets/images/collegeDeLevis.jpg';
 
 import linkedin from '../../assets/images/icons/linkedin-brands.svg';
 import github from '../../assets/images/icons/github-brands.svg';
@@ -61,7 +61,7 @@ class ProfilePage extends React.Component {
       classes.imgFluid,
     );
     return (
-      <div>
+      <div style={{ marginBottom: -2000 }}>
         <Header
           brand="William Garneau"
           changeColorOnScroll={{
