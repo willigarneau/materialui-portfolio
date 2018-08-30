@@ -89,7 +89,7 @@ function HeaderLinks({ ...props }) {
       <Button
           className={classes.navButton}
           color={window.innerWidth < 960 ? 'transparent' : 'transparent'}
-          href="https://www.creative-tim.com/product/material-kit-pro-react"
+          href="https://www.linkedin.com/in/william-garneau-904707148/"
           round
           target="_blank"
       >
@@ -100,7 +100,7 @@ function HeaderLinks({ ...props }) {
         <Button
           className={classes.navButton}
           color={window.innerWidth < 960 ? 'info' : 'white'}
-          href="https://www.creative-tim.com/product/material-kit-pro-react"
+          href="/contact"
           round
           target="_blank"
         >

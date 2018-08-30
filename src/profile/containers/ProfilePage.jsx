@@ -497,7 +497,7 @@ class ProfilePage extends React.Component {
                             <GridContainer>
                               <GridItem md={12} sm={12} xs={12}>
                                 <CardHeader image plain>
-                                  <a href="Cégep Lévis-Lauzon">
+                                  <a href="https://www.collegedelevis.qc.ca/">
                                     <img alt="..." src={collegeDeLevis} />
                                   </a>
                                   <div
@@ -537,7 +537,7 @@ class ProfilePage extends React.Component {
                             <GridContainer>
                               <GridItem md={12} sm={12} xs={12}>
                                 <CardHeader image plain>
-                                  <a href="Cégep Lévis-Lauzon">
+                                  <a href="http://cll.qc.ca/">
                                     <img alt="..." src={cegep} />
                                   </a>
                                   <div
