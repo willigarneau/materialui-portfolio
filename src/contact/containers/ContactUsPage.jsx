@@ -29,7 +29,7 @@ import Footer from '../../main/components/Footer/Footer.jsx';
 
 import contactUsStyle from '../../assets/jss/material-kit-pro-react/views/contactUsStyle.jsx';
 
-const CustomSkinMap = withScriptjs(withGoogleMap(props => (
+const CustomSkinMap = withScriptjs(withGoogleMap(() => (
   <GoogleMap
     defaultCenter={{ lat: 46.8292716, lng: -71.054464 }}
     defaultOptions={{
